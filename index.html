@@ -14,52 +14,99 @@
     />
   </head>
   <body class="bg-[#F0F0F0]">
-    <header>
+    <!-- Overall Tint -->
+    <div class="overall-tint z-10 bg-black/20 w-full h-screen hidden absolute top-0 left-0 right-0 bottom-0"></div>
+    <!-- Header -->
+    <header class="relative">
+      <!-- Offer Banner -->
       <div
-        class="offer-banner bg-black h-10 w-full text-white p-2 text-center relative"
+        class="offer-banner bg-black w-full text-white py-2 px-3 flex sm:flex-row flex-col justify-center sm:items-center items-start relative"
       >
-        Sign up and get 20% off your first order!.
+        <span class="text-white break-all">Sign up and get 20% off your first order!.</span>
         <span class="underline font-semibold">Sign Up Now</span>
+        <!-- Close Sign icon for offer banner -->
         <div
-          class="close-sign absolute right-10 top-1 text-2xl hover:cursor-pointer"
+          class="close-sign absolute right-3 sm:right-10 top-2 text-2xl hover:cursor-pointer"
         >
-          X
+          <i class="fa-solid fa-xmark"></i>
         </div>
       </div>
-      <nav class="flex lg:items-center justify-around bg-white h-20 w-full p-4">
-          <div class="hamburger text-2xl lg:hidden">
-            <i class="fa-solid fa-bars text-2xl"></i>
+      <!-- Hamburger Menu -->
+      <div
+        class="hamburger-menu w-1/2 sm:w-1/4 absolute top-0 left-[-100%] bg-white h-screen p-4 transition-all duration-800 ease-in-out z-20 pt-10"
+      >
+        <!-- Close Sign icon for hamburger menu -->
+        <div
+          class="close-sign-for-hamburger-menu absolute right-5 top-1 text-2xl hover:cursor-pointer"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <ul
+          class="flex flex-col items-center justify-between text-[#858585] font-semibold gap-5 text-xl"
+        >
+          <li class="hover:cursor-pointer hover:text-black">
+            <a href="">Home</a>
+          </li>
+          <li class="hover:cursor-pointer hover:text-black">
+            <a href="">Top Selling</a>
+          </li>
+          <li class="hover:cursor-pointer hover:text-black">
+            <a href="">New Arrivals</a>
+          </li>
+          <li class="hover:cursor-pointer hover:text-black">
+            <a href="">Categories</a>
+          </li>
+        </ul>
+      </div>
+      <!-- NavBar -->
+      <nav class="flex items-center justify-around bg-white h-20 w-full p-3">
+        <!-- Hamburger Icon -->
+        <div class="hamburger text-2xl lg:hidden hover:cursor-pointer transform active:scale-95">
+          <i class="fa-solid fa-bars sm:text-4xl"></i>
+        </div>
+        <!-- left Side of nav -->
+        <div class="left-side-nav flex items-center justify-between gap-10">
+          <!-- logo div -->
+          <div class="font-sans logoDiv text-black font-bold text-3xl md:text-5xl">
+            <a href="./index.html">SHOP.CO</a>
           </div>
-        <div class="left-side-nav flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10">
-          <div class="font-sans logoDiv text-black font-bold text-4xl">
-            SHOP.CO
-          </div>
-          <div class="navLinks bg-white lg:bg-transparent lg:p-0 p-4 mt-[-16px] lg:mt-0">
+          <!-- Nav LInks -->
+          <div class="navLinks bg-white lg:bg-transparent hidden lg:flex">
             <ul
-              class="flex flex-col lg:flex-row items-center justify-between text-[#858585] font-semibold gap-5 text-xl"
+              class="flex items-center justify-between text-[#858585] font-semibold gap-5 text-xl"
             >
-              <li class="hover:cursor-pointer hover:text-black"><a href="">Home</a></li>
-              <li class="hover:cursor-pointer hover:text-black"><a href="">Top Selling</a></li>
-              <li class="hover:cursor-pointer hover:text-black"><a href="">New Arrivals</a></li>
-              <li class="hover:cursor-pointer hover:text-black"><a href="">Categories</a></li>
+              <li class="hover:cursor-pointer hover:text-black">
+                <a href="">Home</a>
+              </li>
+              <li class="hover:cursor-pointer hover:text-black">
+                <a href="">Top Selling</a>
+              </li>
+              <li class="hover:cursor-pointer hover:text-black">
+                <a href="">New Arrivals</a>
+              </li>
+              <li class="hover:cursor-pointer hover:text-black">
+                <a href="">Categories</a>
+              </li>
             </ul>
           </div>
         </div>
+        <!-- Search Bar Div -->
         <div
-          class="searchBar bg-[#F0F0F0] w-1/4 h-10 rounded-full flex items-center justify-between py-2 px-4"
+          class="searchBar sm:bg-[#F0F0F0] sm:w-1/4 h-10 rounded-full flex items-center justify-between py-2 px-4"
         >
-          <i class="fa-solid fa-magnifying-glass text-[#858585]"></i>
+          <i class="fa-solid fa-magnifying-glass sm:text-[#858585] text-black"></i>
           <input
             type="text"
-            class="w-full h-full rounded-full pl-4"
+            class="w-full h-full rounded-full pl-4 sm:block hidden"
             placeholder="Search for products..."
           />
         </div>
+        <!-- Cart Icon Div -->
         <div class="icons">
           <i class="fa-solid fa-cart-shopping text-xl"></i>
         </div>
       </nav>
     </header>
   </body>
-    <script src="./script.js"></script>
+  <script src="./script.js"></script>
 </html>
