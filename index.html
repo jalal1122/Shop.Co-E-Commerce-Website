@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="./src/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-[#F0F0F0]">
+    <header>
+      <div
+        class="offer-banner bg-black h-10 w-full text-white p-2 text-center relative"
+      >
+        Sign up and get 20% off your first order!.
+        <span class="underline font-semibold">Sign Up Now</span>
+        <div
+          class="close-sign absolute right-10 top-1 text-2xl hover:cursor-pointer"
+        >
+          X
+        </div>
+      </div>
+      <nav class="flex lg:items-center justify-around bg-white h-20 w-full p-4">
+          <div class="hamburger text-2xl lg:hidden">
+            <i class="fa-solid fa-bars text-2xl"></i>
+          </div>
+        <div class="left-side-nav flex flex-col lg:flex-row lg:items-center lg:justify-between gap-10">
+          <div class="font-sans logoDiv text-black font-bold text-4xl">
+            SHOP.CO
+          </div>
+          <div class="navLinks bg-white lg:bg-transparent lg:p-0 p-4 mt-[-16px] lg:mt-0">
+            <ul
+              class="flex flex-col lg:flex-row items-center justify-between text-[#858585] font-semibold gap-5 text-xl"
+            >
+              <li class="hover:cursor-pointer hover:text-black"><a href="">Home</a></li>
+              <li class="hover:cursor-pointer hover:text-black"><a href="">Top Selling</a></li>
+              <li class="hover:cursor-pointer hover:text-black"><a href="">New Arrivals</a></li>
+              <li class="hover:cursor-pointer hover:text-black"><a href="">Categories</a></li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="searchBar bg-[#F0F0F0] w-1/4 h-10 rounded-full flex items-center justify-between py-2 px-4"
+        >
+          <i class="fa-solid fa-magnifying-glass text-[#858585]"></i>
+          <input
+            type="text"
+            class="w-full h-full rounded-full pl-4"
+            placeholder="Search for products..."
+          />
+        </div>
+        <div class="icons">
+          <i class="fa-solid fa-cart-shopping text-xl"></i>
+        </div>
+      </nav>
+    </header>
+  </body>
+    <script src="./script.js"></script>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "shop.co-e-commerce-website",
+  "version": "1.0.0",
+  "description": "An E-Commerce Website build with html css js for my portfolio",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.7",
+    "tailwindcss": "^4.1.7"
+  }
+}
