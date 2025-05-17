@@ -15,14 +15,18 @@
   </head>
   <body class="bg-[#F0F0F0]">
     <!-- Overall Tint -->
-    <div class="overall-tint z-10 bg-black/20 w-full h-screen hidden absolute top-0 left-0 right-0 bottom-0"></div>
+    <div
+      class="overall-tint z-10 bg-black/20 w-full h-screen hidden absolute top-0 left-0 right-0 bottom-0"
+    ></div>
     <!-- Header -->
     <header class="relative">
       <!-- Offer Banner -->
       <div
         class="offer-banner bg-black w-full text-white py-2 px-3 flex sm:flex-row flex-col justify-center sm:items-center items-start relative"
       >
-        <span class="text-white break-all">Sign up and get 20% off your first order!.</span>
+        <span class="text-white break-all"
+          >Sign up and get 20% off your first order!.</span
+        >
         <span class="underline font-semibold">Sign Up Now</span>
         <!-- Close Sign icon for offer banner -->
         <div
@@ -61,13 +65,17 @@
       <!-- NavBar -->
       <nav class="flex items-center justify-around bg-white h-20 w-full p-3">
         <!-- Hamburger Icon -->
-        <div class="hamburger text-2xl lg:hidden hover:cursor-pointer transform active:scale-95">
+        <div
+          class="hamburger text-2xl lg:hidden hover:cursor-pointer transform active:scale-95"
+        >
           <i class="fa-solid fa-bars sm:text-4xl"></i>
         </div>
         <!-- left Side of nav -->
         <div class="left-side-nav flex items-center justify-between gap-10">
           <!-- logo div -->
-          <div class="font-sans logoDiv text-black font-bold text-3xl md:text-5xl">
+          <div
+            class="font-sans logoDiv text-black font-bold text-3xl md:text-5xl"
+          >
             <a href="./index.html">SHOP.CO</a>
           </div>
           <!-- Nav LInks -->
@@ -94,7 +102,9 @@
         <div
           class="searchBar sm:bg-[#F0F0F0] sm:w-1/4 h-10 rounded-full flex items-center justify-between py-2 px-4"
         >
-          <i class="fa-solid fa-magnifying-glass sm:text-[#858585] text-black"></i>
+          <i
+            class="fa-solid fa-magnifying-glass sm:text-[#858585] text-black"
+          ></i>
           <input
             type="text"
             class="w-full h-full rounded-full pl-4 sm:block hidden"
@@ -107,6 +117,47 @@
         </div>
       </nav>
     </header>
+
+    <!-- Hero Section -->
+    <section>
+      <div class="hero-section relative">
+        <div
+          class="hero-left w-1/2 absolute top-5 left-5 z-10 p-5 flex flex-col gap-5 justify-start items-center"
+        >
+          <h1 class="text-7xl font-bold text-black">
+            FIND CLOTHES THAT MATCHES YOUR STYLE
+          </h1>
+          <p class="text-[#858585] text-lg">
+            Browse through our diverse range of meticulously crafted garments,
+            designed to bring out your individuality and cater to your sense of
+            style.
+          </p>
+          <button class="px-14 py-4 bg-black rounded-full text-white">
+            Shop Now
+          </button>
+          <div
+            class="number-showcasing flex items-center justify-between w-full mt-10"
+          >
+            <div class="brands border-r pr-8 border-[#858585]">
+              <span class="text-4xl">200+</span>
+              <p class="text-[#858585]">Internation Brands</p>
+            </div>
+            <div class="products border-r pr-8 border-[#858585]">
+              <span class="text-4xl">2,000+</span>
+              <p class="text-[#858585]">High-Quality Products</p>
+            </div>
+            <div class="customers border-r pr-8 border-[#858585]">
+              <span class="text-4xl">30,000+</span>
+              <p class="text-[#858585]">Happy Customers</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-right absolute top-0 right-10">
+          <img src="./assets/hero-image.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- Brands Section -->
   </body>
   <script src="./script.js"></script>
 </html>
