@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+.brands svg{
+    width: 150px;
+}
+
+@media (max-width: 640px) {
+    .brands svg{
+        width: 100px;
+    }
+}

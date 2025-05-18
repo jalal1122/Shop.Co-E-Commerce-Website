@@ -37,7 +37,7 @@
       </div>
       <!-- Hamburger Menu -->
       <div
-        class="hamburger-menu w-1/2 sm:w-1/4 absolute top-0 left-[-100%] bg-white h-screen p-4 transition-all duration-800 ease-in-out z-20 pt-10"
+        class="hamburger-menu w-1/2 sm:w-1/4 absolute top-0 left-[-100%] bg-white h-screen p-4 transition-all duration-800 ease-in-out z-100 pt-10"
       >
         <!-- Close Sign icon for hamburger menu -->
         <div
@@ -119,15 +119,17 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="w-full lg:h-screen bg-[#F0F0F0]">
-      <div class="hero-section relative lg:block flex flex-col items-center justify-center">
+    <section class="w-full xl:h-fit bg-[#F0F0F0]">
+      <div class="hero-section h-fit relative flex xl:flex-row flex-col justify-center xl:justify-normal items-center xl:gap-0 gap-10">
+
+        <!-- Hero Left Side -->
         <div
-          class="hero-left lg:w-1/2 lg:absolute lg:top-5 lg:left-5 z-10 p-5 flex flex-col gap-5 justify-start items-center"
+          class="hero-left xl:w-1/2 relative w-full z-40 p-5 flex flex-col gap-5 justify-start items-center"
         >
-          <h1 class="text-7xl font-bold text-black">
+          <h1 class="text-4xl sm:text-7xl text-center font-bold text-black">
             FIND CLOTHES THAT MATCHES YOUR STYLE
           </h1>
-          <p class="text-[#858585] text-lg">
+          <p class="text-[#858585] text-lg text-center">
             Browse through our diverse range of meticulously crafted garments,
             designed to bring out your individuality and cater to your sense of
             style.
@@ -136,25 +138,26 @@
             Shop Now
           </button>
           <div
-            class="number-showcasing flex items-center justify-between w-full mt-10"
+            class="number-showcasing flex items-center justify-center gap-5 flex-wrap w-full mt-10"
           >
             <div class="brands border-r pr-8 border-[#858585]">
-              <span class="text-4xl">200+</span>
+              <span class="text-4xl font-bold">200+</span>
               <p class="text-[#858585]">Internation Brands</p>
             </div>
             <div class="products border-r pr-8 border-[#858585]">
-              <span class="text-4xl">2,000+</span>
+              <span class="text-4xl font-bold">2,000+</span>
               <p class="text-[#858585]">High-Quality Products</p>
             </div>
             <div class="customers border-r pr-8 border-[#858585]">
-              <span class="text-4xl">30,000+</span>
+              <span class="text-4xl font-bold">30,000+</span>
               <p class="text-[#858585]">Happy Customers</p>
             </div>
           </div>
         </div>
-        <div class="hero-right lg:absolute lg:top-5 lg:right-10">
-          <img src="./assets/hero-image.png" alt="" class="hidden lg:block" />
-          <img src="./assets/hero-mobile-image.png" alt="" class="lg:hidden" >
+
+        <!-- Hero Right side -->
+        <div class="hero-right">
+          <img src="./assets/hero-image-edited.png" alt="" class="w-full h-full" >
         </div>
       </div>
     </section>
@@ -162,7 +165,7 @@
 
     <!-- Brands Section -->
     <section>
-      <div class="brands bg-black w-full p-8 flex items-center justify-around">
+      <div class="brands bg-black w-full p-8 flex items-center justify-around flex-wrap gap-5">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="92"
