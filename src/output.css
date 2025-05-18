@@ -525,6 +525,11 @@
       gap: calc(var(--spacing) * 0);
     }
   }
+  .\32 xl\:justify-center {
+    @media (width >= 96rem) {
+      justify-content: center;
+    }
+  }
 }
 .brands svg {
   width: 150px;
