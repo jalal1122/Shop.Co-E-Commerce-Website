@@ -78,8 +78,6 @@ function displayArrivalProducts(products) {
   arrivalProducts.push(jewelery);
   arrivalProducts.push(electronics);
 
-  console.log(arrivalProducts);
-
   arrivalSection.innerHTML = ""; // Clear the section before adding new products
 
   // using forEach to iterate through the arrivalProducts array
@@ -98,6 +96,51 @@ function displayArrivalProducts(products) {
   });
 }
 
+// Function to display Top Selling products in top selling section
+function displayTopSellingProducts(products) {
+  // target the top selling section
+  let topSellingSection = document.querySelector(".topSellingProducts");
+
+  // declare a variable to store the top selling products
+  let topSellingProducts = [];
+
+  // using the find method to find the first product in each category
+  const menClothing = products.filter(
+    (product) => product.category === "men's clothing"
+  );
+  const womenClothing = products.filter(
+    (product) => product.category === "women's clothing"
+  );
+  const jewelery = products.filter(
+    (product) => product.category === "jewelery"
+  );
+  const electronics = products.filter(
+    (product) => product.category === "electronics"
+  );
+
+  topSellingProducts.push(menClothing[2]);
+  topSellingProducts.push(womenClothing[2]);
+  topSellingProducts.push(jewelery[2]);
+  topSellingProducts.push(electronics[2]);
+
+  console.log(topSellingProducts);
+
+  topSellingSection.innerHTML = ""; // Clear the section before adding new products
+
+  // using forEach to iterate through the Top Selling products array
+  // and adding the products to the top selling section
+  topSellingProducts.forEach((product) => {
+    topSellingSection.innerHTML += `
+          <div class="product flex justify-center flex-col gap-2 bg-white p-5 rounded-3xl shadow-lg">
+            <img src="${product.image}" class="w-50 self-center aspect-square" alt="">
+            <h2 class="w-40 text-2xl font-semibold">${product.title}</h2>
+            <span>${ratingStars(product.rating.rate)}</span>
+            <p class="text-lg font-bold">Price : ${product.price} $</p>
+          </div>  
+          `;
+  });
+}
+
 async function main() {
   // fetching products from the API
   let products = await fetchProducts();
@@ -106,18 +149,18 @@ async function main() {
     console.error("No products found");
     return;
   }
-  // if they do then store them in local storage 
+  // if they do then store them in local storage
   else {
     console.log(products);
-    products.forEach((product) => {
-      console.log(product.category);
-    });
 
     storeProductsInLocalStorage(products);
   }
 
   // display the products in the arrival section
   displayArrivalProducts(products);
+
+  // display the products in the top selling section
+  displayTopSellingProducts(products);
 
   // target the hamburger menu
   let hamburger = document.querySelector(".hamburger>i");
