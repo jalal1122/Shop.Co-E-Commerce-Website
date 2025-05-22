@@ -2,6 +2,15 @@
   width: 150px;
 }
 
+.swiper{
+  padding: 5px !important;
+  gap: 10px !important;
+}
+
+.swiper-wrapper-custom{
+  padding: 5px !important;
+}
+
 .swiper-button-prev {
   position: relative !important;
   top: 0 !important;
