@@ -12,6 +12,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./customStyles.css">
   </head>
   <body class="bg-[#F0F0F0]">
     <!-- Overall Tint -->
@@ -306,31 +311,71 @@
     </section>
 
     <!-- Browse By -->
-     <section class="bg-white p-10">
-      <div class="browseBy flex flex-col bg-[#F0F0F0] justify-center items-center mt-10 p-5 w-full rounded-2xl">
+    <section class="bg-white p-10">
+      <div
+        class="browseBy flex flex-col bg-[#F0F0F0] justify-center items-center mt-10 p-5 w-full rounded-2xl"
+      >
         <h1 class="text-black sm:text-5xl text-3xl text-center font-bold">
           BROWSE BY CATEGORY
         </h1>
-        <div class="categories flex flex-wrap justify-center items-center gap-10 p-5">
-          <div class="menClothing flex flex-col sm:flex-row pt-5 sm:pt-0 justify-between items-center sm:gap-10 bg-white sm:pl-5 rounded-xl shadow-lg">
-            <h2 class="font-bold sm:text-3xl text-xl text-black ">Men Clothing</h2>
-            <img src="./assets/menClothing.jpg" class="w-80" alt="">
+        <div
+          class="categories flex flex-wrap justify-center items-center gap-10 p-5"
+        >
+          <div
+            class="menClothing flex flex-col sm:flex-row pt-5 sm:pt-0 justify-between items-center sm:gap-10 bg-white sm:pl-5 rounded-xl shadow-lg"
+          >
+            <h2 class="font-bold sm:text-3xl text-xl text-black">
+              Men Clothing
+            </h2>
+            <img src="./assets/menClothing.jpg" class="w-80" alt="" />
           </div>
-          <div class="womenClothing flex flex-col sm:flex-row pt-5 sm:pt-0 justify-between items-center sm:gap-10 gap-5 bg-white sm:pl-5 rounded-xl shadow-lg">
-            <h2 class="font-bold sm:text-3xl text-xl text-black ">Women</h2>
-            <img src="./assets/womenClothing.jpg" class="w-80" alt="">
+          <div
+            class="womenClothing flex flex-col sm:flex-row pt-5 sm:pt-0 justify-between items-center sm:gap-10 gap-5 bg-white sm:pl-5 rounded-xl shadow-lg"
+          >
+            <h2 class="font-bold sm:text-3xl text-xl text-black">Women</h2>
+            <img src="./assets/womenClothing.jpg" class="w-80" alt="" />
           </div>
-          <div class="jewelry flex flex-col sm:flex-row pt-5 sm:pt-0 justify-between items-center sm:gap-10 gap-5 bg-white sm:pl-5 rounded-xl shadow-lg">
-            <h2 class="font-bold sm:text-3xl text-xl text-black ">Jewelry</h2>
-            <img src="./assets/jewelry.jpg" class="w-80" alt="">
+          <div
+            class="jewelry flex flex-col sm:flex-row pt-5 sm:pt-0 justify-between items-center sm:gap-10 gap-5 bg-white sm:pl-5 rounded-xl shadow-lg"
+          >
+            <h2 class="font-bold sm:text-3xl text-xl text-black">Jewelry</h2>
+            <img src="./assets/jewelry.jpg" class="w-80" alt="" />
           </div>
-          <div class="electronic flex flex-col sm:flex-row pt-5 sm:pt-0 justify-between items-center sm:gap-10 gap-5 bg-white sm:pl-5 rounded-xl shadow-lg">
-            <h2 class="font-bold sm:text-3xl text-xl text-black ">Electronics</h2>
-            <img src="./assets/electronics.jpg" class="sm:w-60 w-75" alt="">
+          <div
+            class="electronic flex flex-col sm:flex-row pt-5 sm:pt-0 justify-between items-center sm:gap-10 gap-5 bg-white sm:pl-5 rounded-xl shadow-lg"
+          >
+            <h2 class="font-bold sm:text-3xl text-xl text-black">
+              Electronics
+            </h2>
+            <img src="./assets/electronics.jpg" class="sm:w-60 w-75" alt="" />
           </div>
         </div>
       </div>
-     </section>
+    </section>
+
+    <!-- Happy Clients -->
+    <section class="happy-customers w-[80%] mx-auto">
+      <div class="swiper">
+        <div class="heading-and-next-prev mb-5">
+          <h1>OUR HAPPY CUSTOMERS</h1>
+
+          <!-- If we need navigation buttons -->
+          <div class="buttons-swippers">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper w-100">
+          <!-- Slides -->
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          ...
+        </div>
+      </div>
+    </section>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="./script.js"></script>
 </html>
