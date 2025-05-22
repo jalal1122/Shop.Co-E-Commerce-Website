@@ -132,7 +132,9 @@ function displayTopSellingProducts(products) {
   topSellingProducts.forEach((product) => {
     topSellingSection.innerHTML += `
           <div class="product flex justify-center flex-col gap-2 bg-white p-5 rounded-3xl shadow-lg">
-            <img src="${product.image}" class="w-50 self-center aspect-square" alt="">
+            <img src="${
+              product.image
+            }" class="w-50 self-center aspect-square" alt="">
             <h2 class="w-40 text-2xl font-semibold">${product.title}</h2>
             <span>${ratingStars(product.rating.rate)}</span>
             <p class="text-lg font-bold">Price : ${product.price} $</p>
@@ -183,6 +185,39 @@ async function main() {
   closeHamburger.addEventListener("click", () => {
     document.querySelector(".hamburger-menu").style.left = "-100%";
     overallTint.style.display = "none";
+  });
+
+  const swiper = new Swiper(".swiper", {
+    // Optional parameters
+    direction: "horizontal",
+    loop: true,
+    speed: 400,
+    spaceBetween: 100,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    // Navigation arrows
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    // Responsive breakpoints
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      // when window width is >= 480px
+      480: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      // when window width is >= 640px
+      640: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+    },
   });
 }
 
