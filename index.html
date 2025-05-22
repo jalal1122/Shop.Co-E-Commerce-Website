@@ -582,14 +582,23 @@
       </section>
     </main>
 
+    <!-- Background Gradient Div -->
     <div
-      class="mt-12 bg-gradient-to-b from-white from-50% via-footer via-50% to-footer"
+      class="bg-gradient-to-b from-white from-50% to-[#f0f0f0]"
+      style="
+        background: linear-gradient(
+          0deg,
+          rgba(240, 240, 240, 1) 50%,
+          rgba(255, 255, 255, 1) 0%
+        );
+      "
     >
-      <div class="w-[80%] mx-auto mt-10">
+      <!-- NewsLetter -->
+      <div class="w-full lg:w-[80%] mx-auto">
         <div
           class="flex flex-col items-center gap-4 bg-black p-6 text-white md:flex-row bg-card rounded-[20px]"
         >
-          <h2 class="w-full md:w-2/3 text-5xl font-bold">
+          <h2 class="w-full md:w-2/3 text-3xl lg:text-5xl font-bold text-center">
             STAY UPTO DATE ABOUT OUR LATEST OFFERS
           </h2>
           <div class="flex w-full flex-1 flex-col gap-4">
@@ -615,6 +624,117 @@
         </div>
       </div>
     </div>
+
+    <!-- Footer -->
+    <footer class="p-5 lg:w-[80%] lg:mx-auto w-full">
+      <div
+        class="top-side flex flex-col lg:flex-row lg:justify-between justify-center lg:items-center gap-5"
+      >
+        <div class="div-1 flex flex-col lg:justify-center lg:items-center gap-5 lg:w-40 w-full">
+          <h1 class="text-black font-bold text-2xl">SHOP.CO</h1>
+          <p class="text-lg lg:text-center">
+            We have clothes that suits your style and which you're proud to
+            wear. From women to men.
+          </p>
+          <div class="social-icons flex gap-2">
+            <div class="twiter-icon rounded-full border border-black p-2 w-7">
+              <img
+                src="https://shop-co-demo.vercel.app/_next/static/media/twitter.b03b8cbe.svg"
+                alt=""
+              />
+            </div>
+            <div
+              class="facebook-icon rounded-full border border-black p-2 w-7 bg-black"
+            >
+              <img
+                src="https://shop-co-demo.vercel.app/_next/static/media/facebook.ec567a02.svg"
+                alt=""
+              />
+            </div>
+            <div
+              class="instagram-icon rounded-full border border-black p-2 w-7"
+            >
+              <img
+                src="https://shop-co-demo.vercel.app/_next/static/media/instagram.c3d9a0fc.svg"
+                alt=""
+              />
+            </div>
+            <div class="github-icon rounded-full border border-black p-2 w-7">
+              <img
+                src="https://shop-co-demo.vercel.app/_next/static/media/github.0933da81.svg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="grid lg:grid-cols-4 grid-cols-2 gap-4 w-full">
+          <div class="div-2 flex flex-col lg:items-center gap-5">
+            <h3 class="font-bold">COMPANY</h3>
+            <p>About</p>
+            <p>Features</p>
+            <p>Works</p>
+            <p>Career</p>
+          </div>
+          <div class="div-3 flex flex-col lg:items-center gap-5">
+            <h3 class="font-bold">HELP</h3>
+            <p>Customer Support</p>
+            <p>Delivery Details</p>
+            <p>Terms &amp; Conditions</p>
+            <p>Privacy Policy</p>
+          </div>
+          <div class="div-4 flex flex-col lg:items-center gap-5">
+            <h3 class="font-bold">FAQ</h3>
+            <p>Account</p>
+            <p>Manage Deliveries</p>
+            <p>Orders</p>
+            <p>Payments</p>
+          </div>
+          <div class="div-5 flex flex-col lg:items-center gap-5">
+            <h3 class="font-bold">RESOURCES</h3>
+            <p>Free eBooks</p>
+            <p>Development Tutorial</p>
+            <p>How to - Blog</p>
+            <p>Youtube Playlist</p>
+          </div>
+        </div>
+      </div>
+      <div class="horizontal-line bg-gray-400 h-[1px] mt-5"></div>
+      <div class="bottom-side flex lg:flex-row flex-col gap-3 justify-between items-center mt-5">
+        <p class="text-center font-semibold">Shop.co © 2000-2023, All Rights Reserved</p>
+        <div class="partners flex gap-3">
+          <div class="visa px-3 py-2 rounded-md bg-white">
+            <img
+              src="https://shop-co-demo.vercel.app/_next/static/media/visa.03cb6e6d.svg"
+              alt=""
+            />
+          </div>
+          <div class="mastercard px-3 py-2 rounded-md bg-white">
+            <img
+              src="https://shop-co-demo.vercel.app/_next/static/media/mastercard.3f58fc84.svg"
+              alt=""
+            />
+          </div>
+          <div class="paypal px-3 py-2 rounded-md bg-white">
+            <img
+              src="https://shop-co-demo.vercel.app/_next/static/media/paypal.656cb31f.svg"
+              alt=""
+            />
+          </div>
+          <div class="apple-pay px-3 py-2 rounded-md bg-white">
+            <img
+              src="https://shop-co-demo.vercel.app/_next/static/media/apple-pay.cd5a6b98.svg"
+              alt=""
+            />
+          </div>
+          <div class="google-pay px-3 py-2 rounded-md bg-white">
+            <img
+              src="https://shop-co-demo.vercel.app/_next/static/media/google-pay.61e7048b.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="./script.js"></script>
