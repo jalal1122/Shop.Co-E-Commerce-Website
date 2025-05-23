@@ -8,8 +8,11 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-green-600: oklch(62.7% 0.194 149.214);
+    --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-gray-200: oklch(92.8% 0.006 264.531);
+    --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-400: oklch(70.7% 0.022 261.325);
+    --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -271,11 +274,17 @@
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
+  .h-1 {
+    height: calc(var(--spacing) * 1);
+  }
   .h-4 {
     height: calc(var(--spacing) * 4);
   }
   .h-5 {
     height: calc(var(--spacing) * 5);
+  }
+  .h-8 {
+    height: calc(var(--spacing) * 8);
   }
   .h-10 {
     height: calc(var(--spacing) * 10);
@@ -285,6 +294,9 @@
   }
   .h-\[1px\] {
     height: 1px;
+  }
+  .h-\[2px\] {
+    height: 2px;
   }
   .h-fit {
     height: fit-content;
@@ -301,11 +313,29 @@
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
+  .w-1\/4 {
+    width: calc(1/4 * 100%);
+  }
+  .w-3 {
+    width: calc(var(--spacing) * 3);
+  }
+  .w-3\/4 {
+    width: calc(3/4 * 100%);
+  }
   .w-4 {
     width: calc(var(--spacing) * 4);
   }
+  .w-5 {
+    width: calc(var(--spacing) * 5);
+  }
   .w-7 {
     width: calc(var(--spacing) * 7);
+  }
+  .w-10 {
+    width: calc(var(--spacing) * 10);
+  }
+  .w-20 {
+    width: calc(var(--spacing) * 20);
   }
   .w-40 {
     width: calc(var(--spacing) * 40);
@@ -324,6 +354,12 @@
   }
   .w-\[80\%\] {
     width: 80%;
+  }
+  .w-\[80\] {
+    width: 80;
+  }
+  .w-\[90\%\] {
+    width: 90%;
   }
   .w-full {
     width: 100%;
@@ -345,6 +381,9 @@
   }
   .resize {
     resize: both;
+  }
+  .appearance-none {
+    appearance: none;
   }
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -419,6 +458,10 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-2 {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+  }
   .border-r {
     border-right-style: var(--tw-border-style);
     border-right-width: 1px;
@@ -430,14 +473,23 @@
   .border-\[\#858585\] {
     border-color: #858585;
   }
+  .border-\[\#f0f0f0\] {
+    border-color: #f0f0f0;
+  }
   .border-black {
     border-color: var(--color-black);
   }
   .border-gray-200 {
     border-color: var(--color-gray-200);
   }
+  .border-gray-300 {
+    border-color: var(--color-gray-300);
+  }
   .bg-\[\#F0F0F0\] {
     background-color: #F0F0F0;
+  }
+  .bg-\[\#f0f0f0\] {
+    background-color: #f0f0f0;
   }
   .bg-black {
     background-color: var(--color-black);
@@ -493,6 +545,9 @@
   .p-10 {
     padding: calc(var(--spacing) * 10);
   }
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
+  }
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
   }
@@ -510,6 +565,9 @@
   }
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
+  }
+  .py-5 {
+    padding-block: calc(var(--spacing) * 5);
   }
   .py-10 {
     padding-block: calc(var(--spacing) * 10);
@@ -593,6 +651,9 @@
       color: color-mix(in oklab, var(--color-black) 60%, transparent);
     }
   }
+  .text-gray-500 {
+    color: var(--color-gray-500);
+  }
   .text-white {
     color: var(--color-white);
   }
@@ -619,6 +680,10 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
+  .duration-200 {
+    --tw-duration: 200ms;
+    transition-duration: 200ms;
+  }
   .duration-800 {
     --tw-duration: 800ms;
     transition-duration: 800ms;
@@ -637,6 +702,26 @@
       @supports (color: color-mix(in lab, red, red)) {
         color: color-mix(in oklab, var(--color-black) 40%, transparent);
       }
+    }
+  }
+  .checked\:border-transparent {
+    &:checked {
+      border-color: transparent;
+    }
+  }
+  .checked\:bg-black {
+    &:checked {
+      background-color: var(--color-black);
+    }
+  }
+  .checked\:bg-blue-500 {
+    &:checked {
+      background-color: var(--color-blue-500);
+    }
+  }
+  .checked\:text-black {
+    &:checked {
+      color: var(--color-black);
     }
   }
   .hover\:cursor-pointer {
@@ -726,6 +811,11 @@
   .active\:border-black {
     &:active {
       border-color: var(--color-black);
+    }
+  }
+  .active\:text-black {
+    &:active {
+      color: var(--color-black);
     }
   }
   .sm\:right-10 {

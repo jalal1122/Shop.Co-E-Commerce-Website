@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Categories-SHOP.CO</title>
+    <link href="./src/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./customStyles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Overall Tint -->
+    <div
+      class="overall-tint z-10 bg-black/20 w-full h-screen hidden absolute top-0 left-0 right-0 bottom-0"
+    ></div>
+    <!-- Header -->
+    <header id="header" class="relative">
+      <!-- Offer Banner -->
+      <div
+        class="offer-banner bg-black w-full text-white py-2 px-3 flex sm:flex-row flex-col justify-center sm:items-center items-start relative"
+      >
+        <span class="text-white break-all"
+          >Sign up and get 20% off your first order!.</span
+        >
+        <span class="underline font-semibold">Sign Up Now</span>
+        <!-- Close Sign icon for offer banner -->
+        <div
+          class="close-sign absolute right-3 sm:right-10 top-2 text-2xl hover:cursor-pointer"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+      <!-- Hamburger Menu -->
+      <div
+        class="hamburger-menu w-1/2 sm:w-1/4 absolute top-0 left-[-100%] bg-white h-screen p-4 transition-all duration-800 ease-in-out z-100 pt-10"
+      >
+        <!-- Close Sign icon for hamburger menu -->
+        <div
+          class="close-sign-for-hamburger-menu absolute right-5 top-1 text-2xl hover:cursor-pointer"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <ul
+          class="flex flex-col items-center justify-between text-[#858585] font-semibold gap-5 text-xl"
+        >
+          <li
+            class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black"
+          >
+            <a href="" class="goToHome">Home</a>
+          </li>
+          <li
+            class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black"
+          >
+            <a href="" class="goToTopSelling">Top Selling</a>
+          </li>
+          <li
+            class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black"
+          >
+            <a href="" class="goToNewArrivals">New Arrivals</a>
+          </li>
+          <li
+            class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black"
+          >
+            <a href="./categoriesPage.html">Categories</a>
+          </li>
+        </ul>
+      </div>
+      <!-- NavBar -->
+      <nav class="flex items-center justify-around bg-white h-20 w-full p-3">
+        <!-- Hamburger Icon -->
+        <div
+          class="hamburger text-2xl lg:hidden hover:cursor-pointer transform active:scale-95"
+        >
+          <i class="fa-solid fa-bars sm:text-4xl"></i>
+        </div>
+        <!-- left Side of nav -->
+        <div class="left-side-nav flex items-center justify-between gap-10">
+          <!-- logo div -->
+          <div
+            class="font-sans logoDiv hover:cursor-pointer text-black font-bold text-3xl md:text-5xl"
+          >
+            <a href="./index.html">SHOP.CO</a>
+          </div>
+          <!-- Nav LInks -->
+          <div class="navLinks bg-white lg:bg-transparent hidden lg:flex">
+            <ul
+              class="flex items-center justify-between text-[#858585] font-semibold gap-5 text-xl"
+            >
+              <li
+                class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black"
+              >
+                <a href="#heroSection" class="goToHome2">Home</a>
+              </li>
+              <li
+                class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black"
+              >
+                <a href="#topSelling" class="goToTopSelling2">Top Selling</a>
+              </li>
+              <li
+                class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black"
+              >
+                <a href="#newArrivals" class="goToNewArrivals2">New Arrivals</a>
+              </li>
+              <li
+                class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black"
+              >
+                <a href="./categoriesPage.html">Categories</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Search Bar Div -->
+        <div
+          class="searchBar sm:bg-[#F0F0F0] sm:w-1/4 h-10 rounded-full flex items-center justify-between py-2 px-4"
+        >
+          <i
+            class="fa-solid fa-magnifying-glass sm:text-[#858585] text-black"
+          ></i>
+          <input
+            type="text"
+            class="w-full h-full rounded-full pl-4 sm:block hidden focus:outline-none"
+            placeholder="Search for products..."
+          />
+        </div>
+        <!-- Cart Icon Div -->
+        <div class="icons">
+          <i class="fa-solid fa-cart-shopping text-xl"></i>
+        </div>
+      </nav>
+    </header>
+
+    <!--Horizontal line in between  -->
+    <div class="w-[90%] h-[2px] bg-[#f0f0f0] mx-auto"></div>
+
+    <!-- Link Ladder -->
+    <div class="linkLadder w-[90%] mx-auto flex items-center gap-3 py-5">
+      <a
+        href="./index.html"
+        class="hover:text-black text-gray-500 hover:border-b-2 hover:border-black"
+        >Home</a
+      >
+      &gt;
+      <a
+        href="./categoriesPage.html"
+        class="hover:text-black text-gray-500 hover:border-b-2 hover:border-black"
+        >Categories</a
+      >
+    </div>
+
+    <main>
+      <div class="content flex gap-5 p-5">
+        <!-- Filters -->
+        <div
+          class="filters w-1/4 p-5 rounded-lg border-2 border-[#f0f0f0] flex flex-col gap-5"
+        >
+          <!-- Filter Heading -->
+          <div class="filter-heading flex items-center justify-between">
+            <h1>Filters</h1>
+            <i class="fa-solid fa-sliders" style="color: black"></i>
+          </div>
+          <!--Horizontal line in between  -->
+          <div class="w-full h-[2px] bg-[#f0f0f0] mx-auto"></div>
+          <!-- Men Clothing div -->
+          <div class="men-clothing-div flex items-center justify-between">
+            <label for="menclothing">Men's Clothing</label>
+            <input
+              type="checkbox"
+              id="menclothing"
+              class="appearance-none h-4 w-4 rounded-md border border-gray-300 checked:bg-black checked:border-transparent focus:outline-none transition-all duration-200"
+              name="menclothing"
+            />
+          </div>
+          <!-- Women Clothing div -->
+          <div class="women-clothing-div flex items-center justify-between">
+            <label for="womenclothing">Women's Clothing</label>
+            <input
+              type="checkbox"
+              id="womenclothing"
+              name="womenclothing"
+              class="appearance-none h-4 w-4 rounded-md border border-gray-300 checked:bg-black checked:border-transparent focus:outline-none transition-all duration-200"
+            />
+          </div>
+          <!-- Men Clothing div -->
+          <div class="jewelry-div flex items-center justify-between">
+            <label for="jewelry">Jewelry</label>
+            <input
+              type="checkbox"
+              id="jewelry"
+              name="jewelry"
+              class="appearance-none h-4 w-4 rounded-md border border-gray-300 checked:bg-black checked:border-transparent focus:outline-none transition-all duration-200"
+            />
+          </div>
+          <!-- Men Clothing div -->
+          <div class="electronics-div flex items-center justify-between">
+            <label for="electronics">Electronics</label>
+            <input
+              type="checkbox"
+              id="electronics"
+              name="electronics"
+              class="appearance-none h-4 w-4 rounded-md border border-gray-300 checked:bg-black checked:border-transparent focus:outline-none transition-all duration-200"
+            />
+          </div>
+          <!--Horizontal line in between  -->
+          <div class="w-full h-[2px] bg-[#f0f0f0] mx-auto"></div>
+          <!-- Price Heading -->
+          <div class="price-heading flex items-center justify-between">
+            <label for="price">Price Range</label>
+            <i class="fa-solid fa-money-bill" style="color: black"></i>
+          </div>
+          <!--Horizontal line in between  -->
+          <div class="w-full h-[2px] bg-[#f0f0f0] mx-auto"></div>
+          <!-- Price Range -->
+          <div
+            class="price-range flex flex-col items-center justify-center gap-3"
+          >
+            <input
+              type="number"
+              id="minPrice"
+              placeholder="Min Price"
+              class="w-1/2 h-10 rounded-md border-2 border-[#f0f0f0] px-2 focus:outline-none"
+            />
+            <p class="font-bold">TO</p>
+            <input
+              type="number"
+              id="maxPrice"
+              placeholder="Max Price"
+              class="w-1/2 h-10 rounded-md border-2 border-[#f0f0f0] px-2 focus:outline-none"
+            />
+          </div>
+        </div>
+        <!-- Products Side -->
+        <div class="right-side flex flex-col w-3/4 p-5">
+            <!-- Top Headings -->
+            <div class="top-headings flex items-center justify-between">
+                <h1>Men's Clothing</h1>
+                <p>showing 1-10 of 20 Products</p>
+            </div>
+            <!-- Products -->
+             <div id="products" class="flex flex-wrap justify-center items-center gap-5 p-5"></div>
+             <!--Horizontal line in between  -->
+    <div class="w-full h-[2px] bg-[#f0f0f0] mx-auto"></div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="./categoryPage.js"></script>
+</html>
