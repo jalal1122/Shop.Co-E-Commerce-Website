@@ -235,16 +235,42 @@
           </div>
         </div>
         <!-- Products Side -->
-        <div class="right-side flex flex-col w-3/4 p-5">
-            <!-- Top Headings -->
-            <div class="top-headings flex items-center justify-between">
-                <h1>Men's Clothing</h1>
-                <p>showing 1-10 of 20 Products</p>
+        <div class="right-side flex flex-col gap-5 w-3/4 p-5">
+          <!-- Top Headings -->
+          <div class="top-headings flex items-center justify-between">
+            <h1 class="text-black font-bold text-4xl">Men's Clothing</h1>
+            <p
+              class="showing-total-products font-semibold text-lg text-gray-500"
+            >
+              showing 1-10 of 20 Products
+            </p>
+          </div>
+          <!-- Products -->
+          <div
+            id="products"
+            class="flex flex-wrap justify-center items-center gap-5 p-5"
+          ></div>
+          <!--Horizontal line in between  -->
+          <div class="w-full h-[2px] bg-[#f0f0f0] mx-auto"></div>
+
+          <!-- Pagination -->
+          <div class="pagination">
+            <div class="flex items-center justify-between gap-5">
+              <button
+                class="prev-button bg-white text-black font-semibold border-2 hover:bg-black hover:text-white border-black px-4 py-2 rounded-md hover:cursor-pointer transform active:scale-95 hover:scale-105"
+              >
+                Previous
+              </button>
+              <div
+                class="number-pages flex items-center justify-between gap-2"
+              ></div>
+              <button
+                class="next-button bg-white text-black font-semibold border-2 hover:bg-black hover:text-white border-black px-4 py-2 rounded-md hover:cursor-pointer transform active:scale-95 hover:scale-105"
+              >
+                Next
+              </button>
             </div>
-            <!-- Products -->
-             <div id="products" class="flex flex-wrap justify-center items-center gap-5 p-5"></div>
-             <!--Horizontal line in between  -->
-    <div class="w-full h-[2px] bg-[#f0f0f0] mx-auto"></div>
+          </div>
         </div>
       </div>
     </main>
