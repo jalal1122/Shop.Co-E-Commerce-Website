@@ -19,13 +19,13 @@
     <link rel="stylesheet" href="./customStyles.css" />
   </head>
   <body class="bg-[#F0F0F0]">
-    <main>
+    <main >
       <!-- Overall Tint -->
       <div
         class="overall-tint z-10 bg-black/20 w-full h-screen hidden absolute top-0 left-0 right-0 bottom-0"
       ></div>
       <!-- Header -->
-      <header class="relative">
+      <header id="header" class="relative">
         <!-- Offer Banner -->
         <div
           class="offer-banner bg-black w-full text-white py-2 px-3 flex sm:flex-row flex-col justify-center sm:items-center items-start relative"
@@ -54,16 +54,16 @@
           <ul
             class="flex flex-col items-center justify-between text-[#858585] font-semibold gap-5 text-xl"
           >
-            <li class="hover:cursor-pointer hover:text-black">
+            <li class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black">
               <a href="">Home</a>
             </li>
-            <li class="hover:cursor-pointer hover:text-black">
+            <li class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black">
               <a href="">Top Selling</a>
             </li>
-            <li class="hover:cursor-pointer hover:text-black">
+            <li class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black">
               <a href="">New Arrivals</a>
             </li>
-            <li class="hover:cursor-pointer hover:text-black">
+            <li class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black">
               <a href="">Categories</a>
             </li>
           </ul>
@@ -80,7 +80,7 @@
           <div class="left-side-nav flex items-center justify-between gap-10">
             <!-- logo div -->
             <div
-              class="font-sans logoDiv text-black font-bold text-3xl md:text-5xl"
+              class="font-sans logoDiv hover:cursor-pointer text-black font-bold text-3xl md:text-5xl"
             >
               <a href="./index.html">SHOP.CO</a>
             </div>
@@ -89,16 +89,16 @@
               <ul
                 class="flex items-center justify-between text-[#858585] font-semibold gap-5 text-xl"
               >
-                <li class="hover:cursor-pointer hover:text-black">
-                  <a href="">Home</a>
+                <li class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black">
+                  <a href="#heroSection" class="">Home</a>
                 </li>
-                <li class="hover:cursor-pointer hover:text-black">
-                  <a href="">Top Selling</a>
+                <li class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black">
+                  <a href="#topSelling">Top Selling</a>
                 </li>
-                <li class="hover:cursor-pointer hover:text-black">
-                  <a href="">New Arrivals</a>
+                <li class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black">
+                  <a href="#newArrivals">New Arrivals</a>
                 </li>
-                <li class="hover:cursor-pointer hover:text-black">
+                <li class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black">
                   <a href="">Categories</a>
                 </li>
               </ul>
@@ -113,7 +113,7 @@
             ></i>
             <input
               type="text"
-              class="w-full h-full rounded-full pl-4 sm:block hidden"
+              class="w-full h-full rounded-full pl-4 sm:block hidden focus:outline-none"
               placeholder="Search for products..."
             />
           </div>
@@ -125,7 +125,7 @@
       </header>
 
       <!-- Hero Section -->
-      <section class="w-full xl:h-fit bg-[#F0F0F0]">
+      <section id="heroSection" class="w-full xl:h-fit bg-[#F0F0F0]">
         <div
           class="hero-section h-fit relative flex xl:flex-row flex-col justify-center 2xl:justify-center xl:justify-normal items-center xl:gap-0 gap-10"
         >
@@ -268,7 +268,7 @@
       </section>
 
       <!-- New Arrivals -->
-      <section class="new-arrivals bg-white py-10 border-b border-gray-200">
+      <section id="newArrivals" class="new-arrivals bg-white py-10 border-b border-gray-200">
         <h1 class="text-black text-6xl text-center font-bold">NEW ARRIVALS</h1>
 
         <div
@@ -290,7 +290,7 @@
       </section>
 
       <!-- Top Selling -->
-      <section class="top-selling bg-white py-10 border-b border-gray-200">
+      <section id="topSelling" class="top-selling bg-white py-10 border-b border-gray-200">
         <h1 class="text-black text-6xl text-center font-bold">TOP SELLING</h1>
 
         <div
@@ -735,6 +735,10 @@
         </div>
       </div>
     </footer>
+
+    <div class="go-to-top-arrow fixed bottom-5 right-5 bg-white p-3 rounded-full shadow-lg text-black font-bold text-3xl hover:cursor-pointer">
+      <a href="">&uparrow;</a>
+    </div>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="./script.js"></script>

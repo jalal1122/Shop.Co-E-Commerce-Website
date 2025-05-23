@@ -164,6 +164,16 @@ async function main() {
   // display the products in the top selling section
   displayTopSellingProducts(products);
 
+  document.querySelector(".go-to-top-arrow").addEventListener("click", (e) => {
+    e.preventDefault()
+
+    // Scroll to the top of the page
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+
   // target the hamburger menu
   let hamburger = document.querySelector(".hamburger>i");
 
@@ -211,14 +221,14 @@ async function main() {
         slidesPerView: 2,
         spaceBetween: 30,
       },
-      1024:{
+      1024: {
         slidesPerView: 3,
         spaceBetween: 40,
       },
-      1440:{
+      1440: {
         slidesPerView: 4,
         spaceBetween: 50,
-      }
+      },
     },
   });
 }
