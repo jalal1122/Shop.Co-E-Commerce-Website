@@ -155,17 +155,101 @@
         <h1 class="text-black font-bold text-3xl sm:text-5xl text-center">
           YOUR CART
         </h1>
-        <div>
+        <div
+          class="flex flex-col lg:flex-row items-center lg:items-start w-[90%] mx-auto mt-10"
+        >
           <!-- Cart items Side -->
           <div
-            class="cart-items flex flex-col gap-5 justify-center items-center p-5"
-          ></div>
+            class="cart-items flex flex-col gap-5 justify-center items-center p-5 border-2 border-[#f0f0f0] m-2 rounded-lg w-2/3"
+          >
+            <!-- Item -->
+            <div
+              class="cart-item flex gap-5 p-5 bg-white border-2 border-[#f0f0f0] rounded-lg shadow-md"
+            >
+              <!-- Image -->
+              <div class="left-image w-fit p-2 shadow-lg rounded-lg">
+                <img
+                  src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+                  alt="Product Image"
+                  class="w-35 rounded-lg"
+                />
+              </div>
+              <!-- Right Side Details -->
+              <div class="right-details flex flex-col gap-5 justify-center">
+                <div class="div flex flex-col gap-3">
+                  <!-- Product Title -->
+                  <h2 class="font-bold text-black text-2xl">Product Title</h2>
+                  <!-- Product Size -->
+                  <p class="font-semibold text-lg text-black">Size : Medium</p>
+                </div>
+                <div class="div flex gap-3 justify-between items-center">
+                  <!-- Product Price -->
+                  <h2 class="font-bold text-2xl text-black">Price:</h2>
+                  <!-- Product Quantity Selector -->
+                  <div
+                    class="quantity-selector bg-[#f0f0f0] flex gap-5 items-center justify-between px-3 py-1 rounded-full"
+                  >
+                    <button
+                      class="decrease-quantity hover:cursor-pointer hover:bg-gray-300 rounded-full text-xl sm:text-2xl"
+                    >
+                      -
+                    </button>
+                    <span class="quantity font-bold text-md sm:text-lg">1</span>
+                    <button
+                      class="increase-quantity hover:cursor-pointer hover:bg-gray-300 rounded-full text-xl sm:text-2xl"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+                <!-- remove button -->
+                <div class="remove-button flex justify-center items-center">
+                  <button
+                    class="remove-item bg-black w-3/4 text-white px-4 py-2 rounded-full hover:bg-red-600"
+                  >
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
           <!-- Cart Summary Side -->
-          <div class="cart-summary"></div>
+          <div
+            class="cart-summary flex flex-col gap-5 justify-center p-5 border-2 border-[#f0f0f0] m-2 rounded-lg w-1/3"
+          >
+            <h2 class="font-bold text-black text-3xl">Order Summary</h2>
+            <div class="subtotal flex justify-between items-center gap-5">
+              <p>Subtotal</p>
+              <p class="font-bold text-lg">$100.00</p>
+            </div>
+            <div class="discount flex justify-between items-center gap-5">
+              <p>Discount</p>
+              <p class="font-bold text-lg text-red-600">-$20.00</p>
+            </div>
+            <div class="delivery flex justify-between items-center gap-5">
+              <p>Delivery Fee</p>
+              <p>$15</p>
+            </div>
+            <!-- Horizontal Line -->
+            <div class="horizontal-line w-full h-[1px] bg-[#f0f0f0]"></div>
+            <!-- total  -->
+            <div class="total flex justify-between items-center gap-5">
+              <p>Total</p>
+              <p>$95</p>
+            </div>
+            <!-- Checkout Button -->
+            <div class="checkout-button flex justify-center items-center">
+              <button
+                class="bg-black w-full text-white px-4 py-2 hover:cursor-pointer rounded-full hover:bg-green-600"
+              >
+                Checkout
+              </button>
+            </div>
+          </div>
         </div>
       </section>
     </main>
-    
+
     <!-- Background Gradient Div -->
     <div
       class="bg-gradient-to-b from-white from-50% to-[#f0f0f0]"
@@ -215,136 +299,138 @@
     <footer class="bg-[#f0f0f0] p-5">
       <div class="lg:w-[80%] bg-[#f0f0f0] lg:mx-auto w-full">
         <div
-        class="top-side flex flex-col lg:flex-row lg:justify-between justify-center lg:items-center gap-5"
-      >
-        <div
-          class="div-1 flex flex-col lg:justify-center lg:items-center gap-5 lg:w-40 w-full"
+          class="top-side flex flex-col lg:flex-row lg:justify-between justify-center lg:items-center gap-5"
         >
-          <h1
-            onclick="gotoHOmeTop()"
-            class="text-black font-bold text-2xl hover:cursor-pointer"
+          <div
+            class="div-1 flex flex-col lg:justify-center lg:items-center gap-5 lg:w-40 w-full"
           >
-            SHOP.CO
-          </h1>
-          <p class="text-lg lg:text-center">
-            We have clothes that suits your style and which you're proud to
-            wear. From women to men.
+            <h1
+              onclick="gotoHOmeTop()"
+              class="text-black font-bold text-2xl hover:cursor-pointer"
+            >
+              SHOP.CO
+            </h1>
+            <p class="text-lg lg:text-center">
+              We have clothes that suits your style and which you're proud to
+              wear. From women to men.
+            </p>
+            <div class="social-icons flex gap-2">
+              <div class="twiter-icon rounded-full border border-black p-2 w-7">
+                <a href="https://twitter.com/">
+                  <img
+                    src="https://shop-co-demo.vercel.app/_next/static/media/twitter.b03b8cbe.svg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div
+                class="facebook-icon rounded-full border border-black p-2 w-7 bg-black"
+              >
+                <a href="https://www.facebook.com">
+                  <img
+                    src="https://shop-co-demo.vercel.app/_next/static/media/facebook.ec567a02.svg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div
+                class="instagram-icon rounded-full border border-black p-2 w-7"
+              >
+                <a href="https://www.instagram.com/">
+                  <img
+                    src="https://shop-co-demo.vercel.app/_next/static/media/instagram.c3d9a0fc.svg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div class="github-icon rounded-full border border-black p-2 w-7">
+                <a href="https://www.github.com/">
+                  <img
+                    src="https://shop-co-demo.vercel.app/_next/static/media/github.0933da81.svg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="grid lg:grid-cols-4 grid-cols-2 gap-4 w-full">
+            <div class="div-2 flex flex-col lg:items-center gap-5">
+              <h3 class="font-bold">COMPANY</h3>
+              <p>About</p>
+              <p>Features</p>
+              <p>Works</p>
+              <p>Career</p>
+            </div>
+            <div class="div-3 flex flex-col lg:items-center gap-5">
+              <h3 class="font-bold">HELP</h3>
+              <p>Customer Support</p>
+              <p>Delivery Details</p>
+              <p>Terms &amp; Conditions</p>
+              <p>Privacy Policy</p>
+            </div>
+            <div class="div-4 flex flex-col lg:items-center gap-5">
+              <h3 class="font-bold">FAQ</h3>
+              <p>Account</p>
+              <p>Manage Deliveries</p>
+              <p>Orders</p>
+              <p>Payments</p>
+            </div>
+            <div class="div-5 flex flex-col lg:items-center gap-5">
+              <h3 class="font-bold">RESOURCES</h3>
+              <p>Free eBooks</p>
+              <p>Development Tutorial</p>
+              <p>How to - Blog</p>
+              <p>Youtube Playlist</p>
+            </div>
+          </div>
+        </div>
+        <div class="horizontal-line bg-gray-400 h-[1px] mt-5"></div>
+        <div
+          class="bottom-side flex lg:flex-row flex-col gap-3 justify-between items-center mt-5"
+        >
+          <p class="text-center font-semibold">
+            Shop.co © 2000-2023, All Rights Reserved
           </p>
-          <div class="social-icons flex gap-2">
-            <div class="twiter-icon rounded-full border border-black p-2 w-7">
-              <a href="https://twitter.com/">
-                <img
-                  src="https://shop-co-demo.vercel.app/_next/static/media/twitter.b03b8cbe.svg"
-                  alt=""
-                />
-              </a>
+          <div class="partners flex gap-3">
+            <div class="visa px-3 py-2 rounded-md bg-white">
+              <img
+                src="https://shop-co-demo.vercel.app/_next/static/media/visa.03cb6e6d.svg"
+                alt=""
+              />
             </div>
-            <div
-              class="facebook-icon rounded-full border border-black p-2 w-7 bg-black"
-            >
-              <a href="https://www.facebook.com">
-                <img
-                  src="https://shop-co-demo.vercel.app/_next/static/media/facebook.ec567a02.svg"
-                  alt=""
-                />
-              </a>
+            <div class="mastercard px-3 py-2 rounded-md bg-white">
+              <img
+                src="https://shop-co-demo.vercel.app/_next/static/media/mastercard.3f58fc84.svg"
+                alt=""
+              />
             </div>
-            <div
-              class="instagram-icon rounded-full border border-black p-2 w-7"
-            >
-              <a href="https://www.instagram.com/">
-                <img
-                  src="https://shop-co-demo.vercel.app/_next/static/media/instagram.c3d9a0fc.svg"
-                  alt=""
-                />
-              </a>
+            <div class="paypal px-3 py-2 rounded-md bg-white">
+              <img
+                src="https://shop-co-demo.vercel.app/_next/static/media/paypal.656cb31f.svg"
+                alt=""
+              />
             </div>
-            <div class="github-icon rounded-full border border-black p-2 w-7">
-              <a href="https://www.github.com/">
-                <img
-                  src="https://shop-co-demo.vercel.app/_next/static/media/github.0933da81.svg"
-                  alt=""
-                />
-              </a>
+            <div class="apple-pay px-3 py-2 rounded-md bg-white">
+              <img
+                src="https://shop-co-demo.vercel.app/_next/static/media/apple-pay.cd5a6b98.svg"
+                alt=""
+              />
+            </div>
+            <div class="google-pay px-3 py-2 rounded-md bg-white">
+              <img
+                src="https://shop-co-demo.vercel.app/_next/static/media/google-pay.61e7048b.svg"
+                alt=""
+              />
             </div>
           </div>
         </div>
-        <div class="grid lg:grid-cols-4 grid-cols-2 gap-4 w-full">
-          <div class="div-2 flex flex-col lg:items-center gap-5">
-            <h3 class="font-bold">COMPANY</h3>
-            <p>About</p>
-            <p>Features</p>
-            <p>Works</p>
-            <p>Career</p>
-          </div>
-          <div class="div-3 flex flex-col lg:items-center gap-5">
-            <h3 class="font-bold">HELP</h3>
-            <p>Customer Support</p>
-            <p>Delivery Details</p>
-            <p>Terms &amp; Conditions</p>
-            <p>Privacy Policy</p>
-          </div>
-          <div class="div-4 flex flex-col lg:items-center gap-5">
-            <h3 class="font-bold">FAQ</h3>
-            <p>Account</p>
-            <p>Manage Deliveries</p>
-            <p>Orders</p>
-            <p>Payments</p>
-          </div>
-          <div class="div-5 flex flex-col lg:items-center gap-5">
-            <h3 class="font-bold">RESOURCES</h3>
-            <p>Free eBooks</p>
-            <p>Development Tutorial</p>
-            <p>How to - Blog</p>
-            <p>Youtube Playlist</p>
-          </div>
-        </div>
-      </div>
-      <div class="horizontal-line bg-gray-400 h-[1px] mt-5"></div>
-      <div
-        class="bottom-side flex lg:flex-row flex-col gap-3 justify-between items-center mt-5"
-      >
-        <p class="text-center font-semibold">
-          Shop.co © 2000-2023, All Rights Reserved
-        </p>
-        <div class="partners flex gap-3">
-          <div class="visa px-3 py-2 rounded-md bg-white">
-            <img
-              src="https://shop-co-demo.vercel.app/_next/static/media/visa.03cb6e6d.svg"
-              alt=""
-            />
-          </div>
-          <div class="mastercard px-3 py-2 rounded-md bg-white">
-            <img
-              src="https://shop-co-demo.vercel.app/_next/static/media/mastercard.3f58fc84.svg"
-              alt=""
-            />
-          </div>
-          <div class="paypal px-3 py-2 rounded-md bg-white">
-            <img
-              src="https://shop-co-demo.vercel.app/_next/static/media/paypal.656cb31f.svg"
-              alt=""
-            />
-          </div>
-          <div class="apple-pay px-3 py-2 rounded-md bg-white">
-            <img
-              src="https://shop-co-demo.vercel.app/_next/static/media/apple-pay.cd5a6b98.svg"
-              alt=""
-            />
-          </div>
-          <div class="google-pay px-3 py-2 rounded-md bg-white">
-            <img
-              src="https://shop-co-demo.vercel.app/_next/static/media/google-pay.61e7048b.svg"
-              alt=""
-            />
-          </div>
-        </div>
-      </div>
       </div>
     </footer>
 
     <!-- Go To Top Arrow Button -->
-    <div class="go-to-top-arrow fixed bottom-5 right-5 bg-white p-3 rounded-full shadow-lg text-black font-bold text-3xl hover:cursor-pointer">
+    <div
+      class="go-to-top-arrow fixed bottom-5 right-5 bg-white p-3 rounded-full shadow-lg text-black font-bold text-3xl hover:cursor-pointer"
+    >
       <a href="">&uparrow;</a>
     </div>
   </body>

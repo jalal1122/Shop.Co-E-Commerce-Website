@@ -72,11 +72,97 @@ document.querySelector(".goToNewArrivals2").addEventListener("click", (e) => {
 
 // Add event listener to the "Go to Top" arrow button
 document.querySelector(".go-to-top-arrow").addEventListener("click", (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    // Scroll to the top of the page
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+  // Scroll to the top of the page
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
   });
+});
+
+function getCartItemsFromLocalStorage() {
+  // Retrieve cart items from local storage
+  const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+  return cartItems;
+}
+
+function renderCartItems() {
+  // Get the cart items from local storage
+  const cartItems = getCartItemsFromLocalStorage();
+
+  // Target the cart items container
+  const cartItemsContainer = document.querySelector(".cart-items");
+
+  // Clear the container before rendering
+  cartItemsContainer.innerHTML = "";
+
+  // Check if there are any items in the cart
+  if (cartItems.length === 0) {
+    cartItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
+    return;
+  }
+
+  let cartItemsHTML = "";
+
+  // Render each item in the cart
+  cartItems.forEach((item) => {
+    cartItemsHTML += `<div
+              class="cart-item flex gap-5 p-5 bg-white border-2 border-[#f0f0f0] rounded-lg shadow-md"
+            >
+              <!-- Image -->
+              <div class="left-image w-fit p-2 shadow-lg rounded-lg">
+                <img
+                  src="${item.image}"
+                  alt="Product Image"
+                  class="w-35 rounded-lg"
+                />
+              </div>
+              <!-- Right Side Details -->
+              <div class="right-details flex flex-col gap-5 justify-center">
+                <div class="div flex flex-col gap-3">
+                  <!-- Product Title -->
+                  <h2 class="font-bold text-black w-100 text-2xl">${item.title}</h2>
+                  <!-- Product Size -->
+                  <p class="font-semibold text-lg text-black">Size : ${item.size}</p>
+                </div>
+                <div class="div flex gap-3 justify-between items-center">
+                  <!-- Product Price -->
+                  <h2 class="font-bold text-2xl text-black">$${item.price}</h2>
+                  <!-- Product Quantity Selector -->
+                  <div
+                    class="quantity-selector bg-[#f0f0f0] flex gap-5 items-center justify-between px-3 py-1 rounded-full"
+                  >
+                    <button
+                      class="decrease-quantity hover:cursor-pointer hover:bg-gray-300 rounded-full text-xl sm:text-2xl"
+                    >
+                      -
+                    </button>
+                    <span class="quantity font-bold text-md sm:text-lg">1</span>
+                    <button
+                      class="increase-quantity hover:cursor-pointer hover:bg-gray-300 rounded-full text-xl sm:text-2xl"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+                <!-- remove button -->
+                <div class="remove-button flex justify-center items-center">
+                  <button
+                    class="remove-item bg-black w-3/4 text-white px-4 py-2 rounded-full hover:cursor-pointer active:scale-95 hover:bg-red-600"
+                  >
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </div>
+              </div>
+            </div>`;
+  });
+
+  // Insert the generated HTML into the cart items container
+  cartItemsContainer.innerHTML = cartItemsHTML;
+}
+
+// on DOMContentLoaded, render the cart items
+document.addEventListener("DOMContentLoaded", () => {
+  renderCartItems();
+});

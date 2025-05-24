@@ -288,7 +288,7 @@ addToCartButton.addEventListener("click", (e) => {
   // create a cart item object
   const cartItem = {
     ...product,
-    size: selectedSize ? selectedSize.textContent.trim() : "N/A",
+    size: selectedSize ? selectedSize.textContent.trim() : "Medium",
     quantity: quantity,
   };
 
