@@ -72,14 +72,14 @@ document.querySelector(".goToNewArrivals2").addEventListener("click", (e) => {
 
 // Add event listener to the "Go to Top" arrow button
 document.querySelector(".go-to-top-arrow").addEventListener("click", (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    // Scroll to the top of the page
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+  // Scroll to the top of the page
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
   });
+});
 
 // Function to get product details from local storage
 function getProductFromLocalStorage() {
@@ -143,9 +143,6 @@ function renderRecommendedProducts(products) {
   // retrieve the current page product
   const product = getProductFromLocalStorage();
 
-  console.log(`Current product:`, product);
-  console.log(`All products:`, products);
-
   // target the recommended products section
   const recommendedSection = document.querySelector(".recommended-products");
 
@@ -154,7 +151,9 @@ function renderRecommendedProducts(products) {
 
   // filter the recommended products based on the current product category
   const recommendedProducts = products.filter((productItem) => {
-    return (productItem.category === product.category && productItem.id !== product.id)
+    return (
+      productItem.category === product.category && productItem.id !== product.id
+    );
   });
 
   let recommendedProductsHTML = "";
@@ -218,3 +217,92 @@ function getProductsFromLocalStorage() {
   // If not, return null
   return products ? JSON.parse(products) : null;
 }
+
+// target the product size buttons
+let productSizeButtons = document.querySelectorAll(".size-option");
+
+// iterate through each product size button
+productSizeButtons.forEach((button) => {
+  // add an event listener to each button
+  button.addEventListener("click", (e) => {
+    // change the background color and text color of the unclicked button to default
+    productSizeButtons.forEach((btn) => {
+      btn.style.backgroundColor = "#f0f0f0";
+      btn.style.color = "#000";
+    });
+    // change the background color and text color of the clicked button
+    e.target.style.backgroundColor = "#000";
+    e.target.style.color = "#fff";
+  });
+});
+
+// target the - buttons for quantity
+let minusButton = document.querySelector(".decrease-quantity");
+
+// target the + buttons for quantity
+let plusButton = document.querySelector(".increase-quantity");
+
+// target the quantity div
+let quantityDiv = document.querySelector(".quantity");
+
+// add event listeners to the - button
+minusButton.addEventListener("click", (e) => {
+  // get the current quantity
+  let currentQuantity = parseInt(quantityDiv.textContent);
+
+  // check if the current quantity is greater than 1
+  if (currentQuantity > 1) {
+    // decrease the quantity by 1
+    currentQuantity--;
+    // update the quantity div with the new quantity
+    quantityDiv.textContent = currentQuantity;
+  }
+});
+
+// add event listeners to the + button
+plusButton.addEventListener("click", (e) => {
+  // get the current quantity
+  let currentQuantity = parseInt(quantityDiv.textContent);
+  // increase the quantity by 1
+  currentQuantity++;
+  // update the quantity div with the new quantity
+  quantityDiv.textContent = currentQuantity;
+});
+
+// target the add to cart button
+let addToCartButton = document.querySelector(".add-to-cart-button");
+
+// add event listener to the add to cart button
+addToCartButton.addEventListener("click", (e) => {
+  // get the current product from local storage
+  const product = getProductFromLocalStorage();
+
+  // get the selected size from the size buttons
+  const selectedSize = Array.from(productSizeButtons).find(
+    (button) => button.style.backgroundColor === "rgb(0, 0, 0)"
+  );
+
+  // get the quantity from the quantity div
+  const quantity = parseInt(quantityDiv.textContent);
+
+  // create a cart item object
+  const cartItem = {
+    ...product,
+    size: selectedSize ? selectedSize.textContent.trim() : "N/A",
+    quantity: quantity,
+  };
+
+  // retrieve cart items from local storage
+  let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+  // add the new item to the cart items array
+  cartItems.push(cartItem);
+
+  // save the updated cart items back to local storage
+  localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+  document.querySelector(".toast").classList.remove("hidden");
+  setTimeout(() => {
+    document.querySelector(".toast").classList.add("hidden");
+  }, 1500);
+});
