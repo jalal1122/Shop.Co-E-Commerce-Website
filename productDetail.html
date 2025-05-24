@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Categories-SHOP.CO</title>
+    <title>Document</title>
     <link href="./src/output.css" rel="stylesheet" />
     <link rel="stylesheet" href="./customStyles.css" />
     <link
@@ -151,133 +151,61 @@
         class="hover:text-black text-gray-500 hover:border-b-2 hover:border-black"
         >Categories</a
       >
+      &gt;
+      <span class="text-gray-500">Product Detail</span>
     </div>
 
     <main>
-      <div class="content flex gap-5 p-5">
-        <!-- Filters -->
-        <div
-          class="filters w-1/4 h-fit p-5 rounded-lg border-2 border-[#f0f0f0] flex flex-col gap-5"
-        >
-          <!-- Filter Heading -->
-          <div class="filter-heading flex items-center justify-between">
-            <h1>Filters</h1>
-            <i class="fa-solid fa-sliders" style="color: black"></i>
-          </div>
-          <!--Horizontal line in between  -->
-          <div class="w-full h-[2px] bg-[#f0f0f0] mx-auto"></div>
-          <!-- Men Clothing div -->
-          <div class="men-clothing-div flex items-center justify-between">
-            <label for="menclothing">Men's Clothing</label>
-            <input
-              type="checkbox"
-              id="menclothing"
-              checked
-              class="appearance-none h-4 w-4 rounded-md border border-gray-300 checked:bg-black checked:border-transparent focus:outline-none transition-all duration-200"
-              name="menclothing"
-            />
-          </div>
-          <!-- Women Clothing div -->
-          <div class="women-clothing-div flex items-center justify-between">
-            <label for="womenclothing">Women's Clothing</label>
-            <input
-              type="checkbox"
-              id="womenclothing"
-              checked
-              name="womenclothing"
-              class="appearance-none h-4 w-4 rounded-md border border-gray-300 checked:bg-black checked:border-transparent focus:outline-none transition-all duration-200"
-            />
-          </div>
-          <!-- Jewelry div -->
-          <div class="jewelry-div flex items-center justify-between">
-            <label for="jewelry">Jewelry</label>
-            <input
-              type="checkbox"
-              id="jewelry"
-              checked
-              name="jewelry"
-              class="appearance-none h-4 w-4 rounded-md border border-gray-300 checked:bg-black checked:border-transparent focus:outline-none transition-all duration-200"
-            />
-          </div>
-          <!-- Electronics div -->
-          <div class="electronics-div flex items-center justify-between">
-            <label for="electronics">Electronics</label>
-            <input
-              type="checkbox"
-              id="electronics"
-              checked
-              name="electronics"
-              class="appearance-none h-4 w-4 rounded-md border border-gray-300 checked:bg-black checked:border-transparent focus:outline-none transition-all duration-200"
-            />
-          </div>
-          <!--Horizontal line in between  -->
-          <div class="w-full h-[2px] bg-[#f0f0f0] mx-auto"></div>
-          <!-- Price Heading -->
-          <div class="price-heading flex items-center justify-between">
-            <label for="price">Price Range</label>
-            <i class="fa-solid fa-money-bill" style="color: black"></i>
-          </div>
-          <!--Horizontal line in between  -->
-          <div class="w-full h-[2px] bg-[#f0f0f0] mx-auto"></div>
-          <!-- Price Range -->
-          <div
-            class="price-range flex flex-col items-center justify-center gap-3"
-          >
-            <input
-              type="number"
-              id="minPrice"
-              placeholder="Min Price"
-              class="w-1/2 h-10 rounded-md border-2 border-[#f0f0f0] px-2 focus:outline-none"
-            />
-            <p class="font-bold">TO</p>
-            <input
-              type="number"
-              id="maxPrice"
-              placeholder="Max Price"
-              class="w-1/2 h-10 rounded-md border-2 border-[#f0f0f0] px-2 focus:outline-none"
+      <!-- Product Detail Section -->
+      <section
+        class="productDetailSection w-[90%] mx-auto flex flex-col sm:flex-row gap-10 py-10"
+      >
+      <!-- Left Section for Product Image -->
+        <div class="left">
+          <div class="div p-5 bg-white rounded-2xl shadow-xl">
+            <img
+              src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+              alt=""
+              class="w-[500px] object-cover rounded-lg"
             />
           </div>
         </div>
-        <!-- Products Side -->
-        <div class="right-side flex flex-col gap-5 w-3/4 p-5">
-          <!-- Top Headings -->
-          <div class="top-headings flex items-center justify-between">
-            <h1 class="text-black font-bold text-4xl">Men's Clothing</h1>
-            <p
-              class="showing-total-products font-semibold text-lg text-gray-500"
-            >
-              showing 1-10 of 20 Products
-            </p>
-          </div>
-          <!-- Products -->
-          <div
-            id="products"
-            class="flex flex-wrap justify-center items-center gap-5 p-5"
-          ></div>
+        <!-- Right Section for product detail -->
+        <div class="right flex flex-col gap-5 w-full p-10">
+            <!-- Product title -->
+          <h1 class="text-black font-bold text-6xl">Product Title</h1>
+          <!-- Product rating stars -->
+          <div class="rating-stars font-semibold text-lg">Rating: ⭐⭐⭐⭐⭐</div>
+          <!-- Product Price -->
+          <h2 class="text-black font-bold text-3xl">Price</h2>
+          <!-- Product Description -->
+          <p class="text-lg text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
           <!--Horizontal line in between  -->
           <div class="w-full h-[2px] bg-[#f0f0f0] mx-auto"></div>
-
-          <!-- Pagination -->
-          <div class="pagination">
-            <div class="flex items-center justify-between gap-5">
-              <button
-                class="prev-button bg-white text-black font-semibold border-2 hover:bg-black hover:text-white border-black px-4 py-2 rounded-md hover:cursor-pointer transform active:scale-95 hover:scale-105"
-              >
-                Previous
-              </button>
-              <div
-                class="number-pages flex items-center justify-between gap-2"
-              ></div>
-              <button
-                class="next-button bg-white text-black font-semibold border-2 hover:bg-black hover:text-white border-black px-4 py-2 rounded-md hover:cursor-pointer transform active:scale-95 hover:scale-105"
-              >
-                Next
-              </button>
-            </div>
+          <!-- Product Size Choose -->
+          <p class="text-lg text-gray-700">Choose Size</p>
+          <div class="size-div flex items-center justify-between gap-5 w-fit">
+            <div class="size-option px-5 text-semibold py-2 bg-[#f0f0f0] rounded-full">Small</div>
+            <div class="size-option px-5 text-semibold py-2 bg-black text-white rounded-full">Medium</div>
+            <div class="size-option px-5 text-semibold py-2 bg-[#f0f0f0] rounded-full">Large</div>
+            <div class="size-option px-5 text-semibold py-2 bg-[#f0f0f0] rounded-full">X-Large</div>
+          </div>
+          <!--Horizontal line in between  -->
+          <div class="w-full h-[2px] bg-[#f0f0f0] mx-auto"></div>
+          <div class="addto-cartand-quantity-div flex items-center gap-5">
+              <!-- Quantity Selector -->
+              <div class="quantity-selector bg-[#f0f0f0] flex gap-5 items-center justify-between px-4 py-2 rounded-full w-1/2">
+                <button class="decrease-quantity text-4xl">-</button>
+                <span class="quantity font-bold text-xl">1</span>
+                <button class="increase-quantity text-4xl">+</button>
+              </div>
+            <!-- Add to Cart Button -->
+            <button class="add-to-cart-button text-white bg-black px-4 py-3 font-bold rounded-full w-full" >
+              <i class="fa-solid fa-cart-shopping" style="color: white;"></i> Add to Cart
+            </button>
           </div>
         </div>
-      </div>
+      </section>
     </main>
   </body>
-  <script src="./categoryPage.js"></script>
 </html>
