@@ -160,52 +160,84 @@
       <section
         class="productDetailSection w-[90%] mx-auto flex flex-col lg:flex-row gap-10 py-10"
       >
-      <!-- Left Section for Product Image -->
+        <!-- Left Section for Product Image -->
         <div class="left">
-          <div class="div p-5 bg-white rounded-2xl shadow-xl flex items-center justify-center w-fit">
+          <div
+            class="div p-5 bg-white rounded-2xl shadow-xl flex items-center justify-center w-fit"
+          >
             <img
               src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
               alt=""
-              class="w-[500px] object-cover rounded-lg"
+              class="product-img w-[500px] object-cover rounded-lg"
             />
           </div>
         </div>
         <!-- Right Section for product detail -->
         <div class="right flex flex-col gap-5 w-full p-10">
-            <!-- Product title -->
-          <h1 class="text-black font-bold text-6xl">Product Title</h1>
+          <!-- Product title -->
+          <h1 class="product-title text-black font-bold text-6xl">Product Title</h1>
           <!-- Product rating stars -->
-          <div class="rating-stars font-semibold text-lg">Rating: ⭐⭐⭐⭐⭐</div>
+          <div class="rating-stars font-semibold text-lg">
+            Rating: ⭐⭐⭐⭐⭐
+          </div>
           <!-- Product Price -->
-          <h2 class="text-black font-bold text-3xl">Price</h2>
+          <h2 class="product-price text-black font-bold text-3xl">Price</h2>
           <!-- Product Description -->
-          <p class="text-lg text-gray-700">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+          <p class="product-description text-lg text-gray-700">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit
+          </p>
           <!--Horizontal line in between  -->
           <div class="w-full h-[2px] bg-[#f0f0f0] mx-auto"></div>
           <!-- Product Size Choose -->
           <p class="text-lg text-gray-700">Choose Size</p>
-          <div class="size-div flex flex-wrap items-center justify-center gap-5 w-fit">
-            <div class="size-option px-5 text-semibold py-2 bg-[#f0f0f0] rounded-full">Small</div>
-            <div class="size-option px-5 text-semibold py-2 bg-black text-white rounded-full">Medium</div>
-            <div class="size-option px-5 text-semibold py-2 bg-[#f0f0f0] rounded-full">Large</div>
-            <div class="size-option px-5 text-semibold py-2 bg-[#f0f0f0] rounded-full">X-Large</div>
+          <div
+            class="size-div flex flex-wrap items-center justify-center gap-5 w-fit"
+          >
+            <div
+              class="size-option px-5 text-semibold py-2 bg-[#f0f0f0] rounded-full"
+            >
+              Small
+            </div>
+            <div
+              class="size-option px-5 text-semibold py-2 bg-black text-white rounded-full"
+            >
+              Medium
+            </div>
+            <div
+              class="size-option px-5 text-semibold py-2 bg-[#f0f0f0] rounded-full"
+            >
+              Large
+            </div>
+            <div
+              class="size-option px-5 text-semibold py-2 bg-[#f0f0f0] rounded-full"
+            >
+              X-Large
+            </div>
           </div>
           <!--Horizontal line in between  -->
           <div class="w-full h-[2px] bg-[#f0f0f0] mx-auto"></div>
-          <div class="addto-cartand-quantity-div flex flex-col sm:flex-row items-center gap-5">
-              <!-- Quantity Selector -->
-              <div class="quantity-selector bg-[#f0f0f0] flex gap-5 items-center justify-between px-4 py-2 rounded-full w-1/2">
-                <button class="decrease-quantity text-2xl sm:text-4xl">-</button>
-                <span class="quantity font-bold text-lg sm:text-xl">1</span>
-                <button class="increase-quantity text-2xl sm:text-4xl">+</button>
-              </div>
+          <div
+            class="addto-cartand-quantity-div flex flex-col sm:flex-row items-center gap-5"
+          >
+            <!-- Quantity Selector -->
+            <div
+              class="quantity-selector bg-[#f0f0f0] flex gap-5 items-center justify-between px-4 py-2 rounded-full w-1/2"
+            >
+              <button class="decrease-quantity text-2xl sm:text-4xl">-</button>
+              <span class="quantity font-bold text-lg sm:text-xl">1</span>
+              <button class="increase-quantity text-2xl sm:text-4xl">+</button>
+            </div>
             <!-- Add to Cart Button -->
-            <button class="add-to-cart-button text-white bg-black px-4 py-3 font-bold rounded-full w-full" >
-              <i class="fa-solid fa-cart-shopping" style="color: white;"></i> Add to Cart
+            <button
+              class="add-to-cart-button text-white bg-black px-4 py-3 font-bold rounded-full w-full"
+            >
+              <i class="fa-solid fa-cart-shopping" style="color: white"></i> Add
+              to Cart
             </button>
           </div>
         </div>
       </section>
     </main>
   </body>
+  <script src="./productDetail.js"></script>
 </html>

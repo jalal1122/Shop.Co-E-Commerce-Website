@@ -78,6 +78,8 @@ function displayArrivalProducts(products) {
   arrivalProducts.push(jewelery);
   arrivalProducts.push(electronics);
 
+  console.log(arrivalProducts);
+  
   arrivalSection.innerHTML = ""; // Clear the section before adding new products
 
   // using forEach to iterate through the arrivalProducts array
@@ -94,6 +96,41 @@ function displayArrivalProducts(products) {
           </div>  
           `;
   });
+
+  // Adding click event listeners to each product in the arrival section
+  const productDivs = arrivalSection.querySelectorAll(".product");
+  productDivs.forEach((div) => {
+    div.addEventListener("click", productClick);
+  });
+}
+
+// Function to handle product click event
+function productClick(e) {
+  // Get the clicked product element
+  const productElement = e.currentTarget;
+
+  // Get the product title from the clicked element
+  const productTitle = productElement.querySelector("h2").innerText.trim();
+
+  console.log(`Clicked product title: ${productTitle}`);
+  
+
+  // Retrieve products from local storage
+  const products = getProductsFromLocalStorage();
+
+  // Find the clicked product in the products array
+  const clickedProduct = products.find(
+    (product) => product.title.trim() === productTitle
+  );
+
+  console.log(`Clicked product:`, clickedProduct);
+  
+
+  // If the clicked product is found, redirect to the product details page
+  if (clickedProduct) {
+    localStorage.setItem("clickedProduct", JSON.stringify(clickedProduct));
+    window.location.href = "./productDetail.html";
+  }
 }
 
 // Function to display Top Selling products in top selling section
@@ -123,8 +160,6 @@ function displayTopSellingProducts(products) {
   topSellingProducts.push(jewelery[2]);
   topSellingProducts.push(electronics[2]);
 
-  console.log(topSellingProducts);
-
   topSellingSection.innerHTML = ""; // Clear the section before adding new products
 
   // using forEach to iterate through the Top Selling products array
@@ -140,6 +175,12 @@ function displayTopSellingProducts(products) {
             <p class="text-lg font-bold">Price : ${product.price} $</p>
           </div>  
           `;
+  });
+
+  // Adding click event listeners to each product in the top selling section
+  const productDivs = topSellingSection.querySelectorAll(".product");
+  productDivs.forEach((div) => {
+    div.addEventListener("click", productClick);
   });
 }
 
@@ -165,7 +206,7 @@ async function main() {
   displayTopSellingProducts(products);
 
   document.querySelector(".go-to-top-arrow").addEventListener("click", (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     // Scroll to the top of the page
     window.scrollTo({

@@ -196,6 +196,7 @@ function ratingStars(rating) {
   return stars;
 }
 
+// Function to render pagination buttons
 function renderPagination(products) {
   // target the pagination container
   let paginationContainer = document.querySelector(".number-pages");
@@ -319,6 +320,15 @@ function renderPagination(products) {
   }
 }
 
+// Function to retrieve products from local storage
+function getProductsFromLocalStorage() {
+  const products = localStorage.getItem("products");
+  // Check if products exist in local storage
+  // If they do, parse and return them
+  // If not, return null
+  return products ? JSON.parse(products) : null;
+}
+
 // Function to render products on the page
 function renderProducts(products, page) {
   if (products.length === 0) {
@@ -349,9 +359,11 @@ function renderProducts(products, page) {
 
   productContainer.innerHTML = ""; // Clear the container before adding new products
 
+  let productsString = "";
+
   //   iterate through the sliced products and add them to the product container
-  slicedProducts.map((product) => {
-    productContainer.innerHTML += `
+  slicedProducts.forEach((product) => {
+    productsString += `
         <div class="product flex justify-center flex-col gap-2 bg-white p-5 rounded-3xl shadow-lg">
             <img src="${
               product.image
@@ -362,4 +374,35 @@ function renderProducts(products, page) {
         </div>  
           `;
   });
+
+  productContainer.innerHTML = productsString; // Update the product container with the new products
+
+  // Adding click event listeners to each product in the arrival section
+  const productDivs = productContainer.querySelectorAll(".product");
+  productDivs.forEach((div) => {
+    div.addEventListener("click", productClick);
+  });
+}
+
+// Function to handle product click event
+function productClick(e) {
+  // Get the clicked product element
+  const productElement = e.currentTarget;
+
+  // Get the product title from the clicked element
+  const productTitle = productElement.querySelector("h2").innerText.trim();
+
+  // Retrieve products from local storage
+  const products = getProductsFromLocalStorage();
+
+  // Find the clicked product in the products array
+  const clickedProduct = products.find(
+    (product) => product.title.trim() === productTitle
+  );
+
+  // If the clicked product is found, redirect to the product details page
+  if (clickedProduct) {
+    localStorage.setItem("clickedProduct", JSON.stringify(clickedProduct));
+    window.location.href = "./productDetail.html";
+  }
 }
