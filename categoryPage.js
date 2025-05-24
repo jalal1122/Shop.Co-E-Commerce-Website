@@ -70,17 +70,113 @@ document.querySelector(".goToNewArrivals2").addEventListener("click", (e) => {
   gotoArrival();
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const products = JSON.parse(localStorage.getItem("products"));
-  console.log(products);
-  renderProducts(products, currentPage);
-  renderPagination(products);
-});
-
 // current page variable
 let currentPage = 1;
 // total number of products per page variable
 const perPage = 8;
+
+// target the men Clothing checkbox to filter products
+let menClothingCheckbox = document.getElementById("menclothing");
+
+// target the women Clothing checkbox to filter products
+let womenClothingCheckbox = document.getElementById("womenclothing");
+
+// target the jewelry checkbox to filter products
+let jewelryCheckbox = document.getElementById("jewelry");
+
+// target the electronics checkbox to filter products
+let electronicsCheckbox = document.getElementById("electronics");
+
+// target the price min input to filter products
+let priceMinInput = document.getElementById("minPrice");
+// target the price max input to filter products
+let priceMaxInput = document.getElementById("maxPrice");
+
+// Initialize an empty array to store all products
+let allProducts = [];
+// Initialize an empty array to store filtered and current page products
+let products = [];
+
+// on document load, do the following
+document.addEventListener("DOMContentLoaded", () => {
+  // Fetch products from the localStorage
+  const stored = localStorage.getItem("products");
+  // If products are stored, parse them; otherwise, initialize an empty array
+  allProducts = stored ? JSON.parse(stored) : [];
+  // store the all products in the products array
+  products = [...allProducts];
+  // Render the products for the first page
+  renderProducts(products, currentPage);
+  // Render the pagination for the products
+  renderPagination(products);
+});
+
+// Add event listener to the price min input to filter products
+priceMinInput.addEventListener("input", () => {
+  checkfilters();
+});
+
+// Add event listener to the price max input to filter products
+priceMaxInput.addEventListener("input", () => {
+  checkfilters();
+});
+
+// Add event listeners to the checkboxes to filter products
+menClothingCheckbox.addEventListener("change", () => {
+  checkfilters();
+});
+womenClothingCheckbox.addEventListener("change", () => {
+  checkfilters();
+});
+jewelryCheckbox.addEventListener("change", () => {
+  checkfilters();
+});
+electronicsCheckbox.addEventListener("change", () => {
+  checkfilters();
+});
+
+// Function to check the selected filters and update the products array
+function checkfilters() {
+  // create a new array to store the selected categories
+  let selectedCategories = [];
+
+  // check if the checkboxes are checked and push the corresponding category to the selectedCategories array
+  if (menClothingCheckbox.checked) selectedCategories.push("men's clothing");
+  if (womenClothingCheckbox.checked)
+    selectedCategories.push("women's clothing");
+  if (jewelryCheckbox.checked) selectedCategories.push("jewelery");
+  if (electronicsCheckbox.checked) selectedCategories.push("electronics");
+
+  // Get the minimum price value from the input
+  const minPrice = parseFloat(priceMinInput.value) || 0; // Default to 0 if input is empty
+
+  // Get the maximum price value from the input
+  const maxPrice = parseFloat(priceMaxInput.value) || Infinity; // Default to Infinity if input is empty
+
+  // If no checkboxes are selected, show all products
+  if (selectedCategories.length === 0) {
+    products = [...allProducts]; // If no category is selected, show all products
+  }
+  // If checkboxes are selected, filter products based on the selected categories
+  else {
+    products = allProducts.filter((product) =>
+      selectedCategories.includes(product.category)
+    );
+    // Filter products based on the minimum price
+    // This ensures that only products with a price greater than or equal to the minimum price are shown
+    products = [...products.filter((product) => product.price >= minPrice)];
+
+    // Filter products based on the maximum price
+    // This ensures that only products with a price less than or equal to the maximum price are shown
+    products = [...products.filter((product) => product.price <= maxPrice)];
+  }
+
+  // Reset the current page to 1 and re-render products and pagination
+  // This ensures that the user sees the first page of the filtered products
+  currentPage = 1;
+  renderProducts(products, currentPage);
+  renderPagination(products);
+}
 
 // Function to display rating stars based on the rating value
 function ratingStars(rating) {
@@ -202,7 +298,7 @@ function renderPagination(products) {
     if (i === currentPage) {
       pageButton.classList.add("bg-black", "text-white");
     } else {
-      pageButton.classList.add("bg-gray-200","text-black");
+      pageButton.classList.add("bg-gray-200", "text-black");
     }
 
     // add an event listener to the pagination button
@@ -233,7 +329,7 @@ function renderProducts(products, page) {
   // slice the products array to get the products for the current page
   let slicedProducts = products.slice(startIndex, endIndex);
 
-    // target the showing total products and udpate it with real time product lenghts and current page products etc
+  // target the showing total products and udpate it with real time product lenghts and current page products etc
   document.querySelector(".showing-total-products").innerHTML = `showing ${
     startIndex + 1
   }-${Math.min(endIndex, products.length)} of ${products.length} Products`;
