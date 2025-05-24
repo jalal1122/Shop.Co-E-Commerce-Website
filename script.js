@@ -79,7 +79,7 @@ function displayArrivalProducts(products) {
   arrivalProducts.push(electronics);
 
   console.log(arrivalProducts);
-  
+
   arrivalSection.innerHTML = ""; // Clear the section before adding new products
 
   // using forEach to iterate through the arrivalProducts array
@@ -113,7 +113,6 @@ function productClick(e) {
   const productTitle = productElement.querySelector("h2").innerText.trim();
 
   console.log(`Clicked product title: ${productTitle}`);
-  
 
   // Retrieve products from local storage
   const products = getProductsFromLocalStorage();
@@ -124,7 +123,6 @@ function productClick(e) {
   );
 
   console.log(`Clicked product:`, clickedProduct);
-  
 
   // If the clicked product is found, redirect to the product details page
   if (clickedProduct) {
@@ -194,8 +192,6 @@ async function main() {
   }
   // if they do then store them in local storage
   else {
-    console.log(products);
-
     storeProductsInLocalStorage(products);
   }
 
@@ -205,6 +201,7 @@ async function main() {
   // display the products in the top selling section
   displayTopSellingProducts(products);
 
+  // add click event listener to the go to top arrow button
   document.querySelector(".go-to-top-arrow").addEventListener("click", (e) => {
     e.preventDefault();
 

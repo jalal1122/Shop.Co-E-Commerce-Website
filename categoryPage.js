@@ -70,6 +70,17 @@ document.querySelector(".goToNewArrivals2").addEventListener("click", (e) => {
   gotoArrival();
 });
 
+// Add event listener to the "Go to Top" arrow button
+document.querySelector(".go-to-top-arrow").addEventListener("click", (e) => {
+    e.preventDefault();
+
+    // Scroll to the top of the page
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+
 // current page variable
 let currentPage = 1;
 // total number of products per page variable
