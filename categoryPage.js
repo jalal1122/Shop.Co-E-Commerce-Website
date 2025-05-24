@@ -321,6 +321,16 @@ function renderPagination(products) {
 
 // Function to render products on the page
 function renderProducts(products, page) {
+  if (products.length === 0) {
+    // If no products are found, display a message
+    document.getElementById("products").innerHTML = `
+      <div class="no-products-found text-center text-2xl font-bold mt-10">
+        No products found for the selected filters.
+      </div>
+    `;
+    return;
+  }
+
   // variable of index to start the product from the list of products
   const startIndex = (page - 1) * perPage;
   // variable of index to end the product from the list of products
