@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="./customStyles.css" />
   </head>
   <body class="bg-[#F0F0F0]">
-    <main >
+    <main>
       <!-- Overall Tint -->
       <div
         class="overall-tint z-10 bg-black/20 w-full h-screen hidden absolute top-0 left-0 right-0 bottom-0"
@@ -54,16 +54,24 @@
           <ul
             class="flex flex-col items-center justify-between text-[#858585] font-semibold gap-5 text-xl"
           >
-            <li class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black">
+            <li
+              class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black"
+            >
               <a href="#heroSection">Home</a>
             </li>
-            <li class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black">
+            <li
+              class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black"
+            >
               <a href="#topSelling">Top Selling</a>
             </li>
-            <li class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black">
+            <li
+              class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black"
+            >
               <a href="#newArrivals">New Arrivals</a>
             </li>
-            <li class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black">
+            <li
+              class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black"
+            >
               <a href="./categoriesPage.html">Categories</a>
             </li>
           </ul>
@@ -89,16 +97,24 @@
               <ul
                 class="flex items-center justify-between text-[#858585] font-semibold gap-5 text-xl"
               >
-                <li class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black">
+                <li
+                  class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black"
+                >
                   <a href="#heroSection" class="">Home</a>
                 </li>
-                <li class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black">
+                <li
+                  class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black"
+                >
                   <a href="#topSelling">Top Selling</a>
                 </li>
-                <li class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black">
+                <li
+                  class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black"
+                >
                   <a href="#newArrivals">New Arrivals</a>
                 </li>
-                <li class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black">
+                <li
+                  class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black"
+                >
                   <a href="./categoriesPage.html">Categories</a>
                 </li>
               </ul>
@@ -268,7 +284,10 @@
       </section>
 
       <!-- New Arrivals -->
-      <section id="newArrivals" class="new-arrivals bg-white py-10 border-b border-gray-200">
+      <section
+        id="newArrivals"
+        class="new-arrivals bg-white py-10 border-b border-gray-200"
+      >
         <h1 class="text-black text-6xl text-center font-bold">NEW ARRIVALS</h1>
 
         <div
@@ -290,7 +309,10 @@
       </section>
 
       <!-- Top Selling -->
-      <section id="topSelling" class="top-selling bg-white py-10 border-b border-gray-200">
+      <section
+        id="topSelling"
+        class="top-selling bg-white py-10 border-b border-gray-200"
+      >
         <h1 class="text-black text-6xl text-center font-bold">TOP SELLING</h1>
 
         <div
@@ -357,8 +379,8 @@
       <!-- Happy Clients -->
       <section class="happy-customers bg-white p-5">
         <div class="swiper w-[80%] mx-auto p-10">
-          <div class="heading-and-next-prev flex justify-between items-center">
-            <h1 class="text-black font-bold text-5xl">OUR HAPPY CUSTOMERS</h1>
+          <div class="heading-and-next-prev flex gap-5 sm:flex-row flex-col justify-between items-center">
+            <h1 class="text-black font-bold text-3xl text-center sm:text-5xl">OUR HAPPY CUSTOMERS</h1>
 
             <!-- If we need navigation buttons -->
             <div class="buttons-swippers">
@@ -598,7 +620,9 @@
         <div
           class="flex flex-col items-center gap-4 bg-black p-6 text-white md:flex-row bg-card rounded-[20px]"
         >
-          <h2 class="w-full md:w-2/3 text-3xl lg:text-5xl font-bold text-center">
+          <h2
+            class="w-full md:w-2/3 text-3xl lg:text-5xl font-bold text-center"
+          >
             STAY UPTO DATE ABOUT OUR LATEST OFFERS
           </h2>
           <div class="flex w-full flex-1 flex-col gap-4">
@@ -630,40 +654,55 @@
       <div
         class="top-side flex flex-col lg:flex-row lg:justify-between justify-center lg:items-center gap-5"
       >
-        <div class="div-1 flex flex-col lg:justify-center lg:items-center gap-5 lg:w-40 w-full">
-          <h1 class="text-black font-bold text-2xl">SHOP.CO</h1>
+        <div
+          class="div-1 flex flex-col lg:justify-center lg:items-center gap-5 lg:w-40 w-full"
+        >
+          <h1
+            onclick="gotoHOmeTop()"
+            class="text-black font-bold text-2xl hover:cursor-pointer"
+          >
+            SHOP.CO
+          </h1>
           <p class="text-lg lg:text-center">
             We have clothes that suits your style and which you're proud to
             wear. From women to men.
           </p>
           <div class="social-icons flex gap-2">
             <div class="twiter-icon rounded-full border border-black p-2 w-7">
-              <img
-                src="https://shop-co-demo.vercel.app/_next/static/media/twitter.b03b8cbe.svg"
-                alt=""
-              />
+              <a href="https://twitter.com/">
+                <img
+                  src="https://shop-co-demo.vercel.app/_next/static/media/twitter.b03b8cbe.svg"
+                  alt=""
+                />
+              </a>
             </div>
             <div
               class="facebook-icon rounded-full border border-black p-2 w-7 bg-black"
             >
-              <img
-                src="https://shop-co-demo.vercel.app/_next/static/media/facebook.ec567a02.svg"
-                alt=""
-              />
+              <a href="https://www.facebook.com">
+                <img
+                  src="https://shop-co-demo.vercel.app/_next/static/media/facebook.ec567a02.svg"
+                  alt=""
+                />
+              </a>
             </div>
             <div
               class="instagram-icon rounded-full border border-black p-2 w-7"
             >
-              <img
-                src="https://shop-co-demo.vercel.app/_next/static/media/instagram.c3d9a0fc.svg"
-                alt=""
-              />
+              <a href="https://www.instagram.com/">
+                <img
+                  src="https://shop-co-demo.vercel.app/_next/static/media/instagram.c3d9a0fc.svg"
+                  alt=""
+                />
+              </a>
             </div>
             <div class="github-icon rounded-full border border-black p-2 w-7">
-              <img
-                src="https://shop-co-demo.vercel.app/_next/static/media/github.0933da81.svg"
-                alt=""
-              />
+              <a href="https://www.github.com/">
+                <img
+                  src="https://shop-co-demo.vercel.app/_next/static/media/github.0933da81.svg"
+                  alt=""
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -699,8 +738,12 @@
         </div>
       </div>
       <div class="horizontal-line bg-gray-400 h-[1px] mt-5"></div>
-      <div class="bottom-side flex lg:flex-row flex-col gap-3 justify-between items-center mt-5">
-        <p class="text-center font-semibold">Shop.co © 2000-2023, All Rights Reserved</p>
+      <div
+        class="bottom-side flex lg:flex-row flex-col gap-3 justify-between items-center mt-5"
+      >
+        <p class="text-center font-semibold">
+          Shop.co © 2000-2023, All Rights Reserved
+        </p>
         <div class="partners flex gap-3">
           <div class="visa px-3 py-2 rounded-md bg-white">
             <img
@@ -737,7 +780,9 @@
     </footer>
 
     <!-- Go To Top Arrow Button -->
-    <div class="go-to-top-arrow fixed bottom-5 right-5 bg-white p-3 rounded-full shadow-lg text-black font-bold text-3xl hover:cursor-pointer">
+    <div
+      class="go-to-top-arrow fixed bottom-5 right-5 bg-white p-3 rounded-full shadow-lg text-black font-bold text-3xl hover:cursor-pointer"
+    >
       <a href="">&uparrow;</a>
     </div>
   </body>

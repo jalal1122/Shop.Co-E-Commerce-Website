@@ -20,6 +20,15 @@ async function fetchProducts() {
   }
 }
 
+// Function to go to home page top
+function gotoHOmeTop() {
+  window.location.href = "./index.html";
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
+
 // Function to store products in local storage
 function storeProductsInLocalStorage(products) {
   localStorage.setItem("products", JSON.stringify(products));
