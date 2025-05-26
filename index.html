@@ -17,6 +17,7 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="./customStyles.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body class="bg-[#F0F0F0]">
     <main>
@@ -149,6 +150,8 @@
         >
           <!-- Hero Left Side -->
           <div
+            data-aos="fade-left"
+            data-aos-delay="200"
             class="hero-left xl:w-1/2 relative w-full z-40 p-5 flex flex-col gap-5 justify-start items-center"
           >
             <h1 class="text-4xl sm:text-7xl text-center font-bold text-black">
@@ -181,7 +184,7 @@
           </div>
 
           <!-- Hero Right side -->
-          <div class="hero-right">
+          <div class="hero-right" data-aos="fade-right" data-aos-delay="100">
             <img
               src="./assets/hero-image-edited.png"
               alt=""
@@ -346,7 +349,7 @@
           <div
             class="categories flex flex-wrap justify-center items-center gap-10 p-5"
           >
-            <div
+            <div data-aos="fade-left"
               class="menClothing flex flex-col sm:flex-row pt-5 sm:pt-0 justify-between items-center sm:gap-10 bg-white sm:pl-5 rounded-xl shadow-lg"
             >
               <h2 class="font-bold sm:text-3xl text-xl text-black">
@@ -354,19 +357,19 @@
               </h2>
               <img src="./assets/menClothing.jpg" class="w-80" alt="" />
             </div>
-            <div
+            <div data-aos="fade-right"
               class="womenClothing flex flex-col sm:flex-row pt-5 sm:pt-0 justify-between items-center sm:gap-10 gap-5 bg-white sm:pl-5 rounded-xl shadow-lg"
             >
               <h2 class="font-bold sm:text-3xl text-xl text-black">Women</h2>
               <img src="./assets/womenClothing.jpg" class="w-80" alt="" />
             </div>
-            <div
+            <div data-aos="fade-left"
               class="jewelry flex flex-col sm:flex-row pt-5 sm:pt-0 justify-between items-center sm:gap-10 gap-5 bg-white sm:pl-5 rounded-xl shadow-lg"
             >
               <h2 class="font-bold sm:text-3xl text-xl text-black">Jewelry</h2>
               <img src="./assets/jewelry.jpg" class="w-80" alt="" />
             </div>
-            <div
+            <div data-aos="fade-right"
               class="electronic flex flex-col sm:flex-row pt-5 sm:pt-0 justify-between items-center sm:gap-10 gap-5 bg-white sm:pl-5 rounded-xl shadow-lg"
             >
               <h2 class="font-bold sm:text-3xl text-xl text-black">
@@ -381,8 +384,12 @@
       <!-- Happy Clients -->
       <section class="happy-customers bg-white p-5">
         <div class="swiper w-[80%] mx-auto p-10">
-          <div class="heading-and-next-prev flex gap-5 sm:flex-row flex-col justify-between items-center">
-            <h1 class="text-black font-bold text-3xl text-center sm:text-5xl">OUR HAPPY CUSTOMERS</h1>
+          <div
+            class="heading-and-next-prev flex gap-5 sm:flex-row flex-col justify-between items-center"
+          >
+            <h1 class="text-black font-bold text-3xl text-center sm:text-5xl">
+              OUR HAPPY CUSTOMERS
+            </h1>
 
             <!-- If we need navigation buttons -->
             <div class="buttons-swippers">
@@ -787,6 +794,14 @@
     >
       <a href="">&uparrow;</a>
     </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, // animation duration in ms
+        once: true, // whether animation should happen only once
+        delay: 100, // global delay
+      });
+    </script>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="./script.js"></script>

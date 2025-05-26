@@ -93,9 +93,11 @@ function displayArrivalProducts(products) {
 
   // using forEach to iterate through the arrivalProducts array
   // and adding the products to the arrival section
-  arrivalProducts.forEach((product) => {
+  arrivalProducts.forEach((product, index) => {
     arrivalSection.innerHTML += `
-          <div class="product flex justify-center flex-col gap-2 bg-white p-5 rounded-3xl shadow-lg">
+          <div data-aos="fade-up" data-aos-delay="${
+            index * 200
+          }" class="product flex justify-center flex-col gap-2 bg-white p-5 rounded-3xl shadow-lg">
             <img src="${
               product.image
             }" class="w-50 self-center aspect-square" alt="">
@@ -171,9 +173,11 @@ function displayTopSellingProducts(products) {
 
   // using forEach to iterate through the Top Selling products array
   // and adding the products to the top selling section
-  topSellingProducts.forEach((product) => {
+  topSellingProducts.forEach((product, index) => {
     topSellingSection.innerHTML += `
-          <div class="product flex justify-center flex-col gap-2 bg-white p-5 rounded-3xl shadow-lg">
+          <div data-aos="fade-up" data-aos-delay="${
+            index * 200
+          }" class="product flex justify-center flex-col gap-2 bg-white p-5 rounded-3xl shadow-lg">
             <img src="${
               product.image
             }" class="w-50 self-center aspect-square" alt="">

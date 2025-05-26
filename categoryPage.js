@@ -373,9 +373,9 @@ function renderProducts(products, page) {
   let productsString = "";
 
   //   iterate through the sliced products and add them to the product container
-  slicedProducts.forEach((product) => {
+  slicedProducts.forEach((product,index) => {
     productsString += `
-        <div class="product flex justify-center flex-col gap-2 bg-white p-5 rounded-3xl shadow-lg">
+        <div data-aos="fade-up" data-aos-delay="${index * 200}" class="product flex justify-center flex-col gap-2 bg-white p-5 rounded-3xl shadow-lg">
             <img src="${
               product.image
             }" class="w-50 self-center aspect-square" alt="">
