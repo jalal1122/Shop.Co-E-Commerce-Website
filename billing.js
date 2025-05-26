@@ -89,6 +89,10 @@ paymentButtons.forEach((button) => {
   button.addEventListener("click", (e) => {
     let imgUrl = e.target.src;
     document.querySelector(".selected-payment-method img").src = imgUrl;
+    e.target.parentElement.style.transform = "scale(0.9)";
+    setTimeout(() => {
+      e.target.parentElement.style.transform = "scale(1)";
+    }, 200);
   });
 });
 
@@ -143,6 +147,17 @@ billingForm.addEventListener("submit", (e) => {
     return;
   }
 
-  // Display a confirmation message
-  alert("Order confirmed! Thank you for your purchase.");
+  // Show a toast message
+  showToast();
 });
+
+// Function to show a toast message
+function showToast(message = "Order placed successfully!") {
+  const toast = document.getElementById("toast");
+  toast.textContent = message;
+  toast.classList.remove("hidden");
+
+  setTimeout(() => {
+    toast.classList.add("hidden");
+  }, 3000); // hide after 3 seconds
+}

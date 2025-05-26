@@ -297,7 +297,7 @@
               <input
                 type="submit"
                 id="confirmOrder"
-                class="p-3 mt-5 w-1/2 bg-black text-white font-semibold rounded-md hover:bg-gray-800 cursor-pointer"
+                class="p-3 mt-5 w-1/2 active:scale-95 bg-black text-white font-semibold rounded-md hover:bg-gray-800 cursor-pointer"
                 value="Confirm Order"
               />
             </form>
@@ -553,6 +553,12 @@
     >
       <a href="">&uparrow;</a>
     </div>
+
+    <!-- Toast for order placed -->
+    <div id="toast" class="fixed bottom-5 right-5 bg-green-600 text-white font-bold text-xl px-4 py-3 rounded shadow-lg hidden z-50">
+  ✅ Order placed successfully!
+</div>
+
   </body>
   <script src="./billing.js"></script>
 </html>

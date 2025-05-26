@@ -225,11 +225,17 @@
   .right-5 {
     right: calc(var(--spacing) * 5);
   }
+  .right-\[50\%\] {
+    right: 50%;
+  }
   .bottom-0 {
     bottom: calc(var(--spacing) * 0);
   }
   .bottom-5 {
     bottom: calc(var(--spacing) * 5);
+  }
+  .bottom-\[50\%\] {
+    bottom: 50%;
   }
   .left-0 {
     left: calc(var(--spacing) * 0);
@@ -248,6 +254,9 @@
   }
   .z-40 {
     z-index: 40;
+  }
+  .z-50 {
+    z-index: 50;
   }
   .z-100 {
     z-index: 100;
@@ -405,6 +414,11 @@
   .border-collapse {
     border-collapse: collapse;
   }
+  .translate-\[50\%\,50\%\] {
+    --tw-translate-x: 50%,50%;
+    --tw-translate-y: 50%,50%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
   .-translate-x-1 {
     --tw-translate-x: calc(var(--spacing) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
@@ -417,6 +431,12 @@
     --tw-scale-x: 75%;
     --tw-scale-y: 75%;
     --tw-scale-z: 75%;
+    scale: var(--tw-scale-x) var(--tw-scale-y);
+  }
+  .scale-95 {
+    --tw-scale-x: 95%;
+    --tw-scale-y: 95%;
+    --tw-scale-z: 95%;
     scale: var(--tw-scale-x) var(--tw-scale-y);
   }
   .transform {
@@ -487,6 +507,9 @@
   }
   .self-center {
     align-self: center;
+  }
+  .rounded {
+    border-radius: 0.25rem;
   }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
@@ -926,6 +949,14 @@
       --tw-scale-x: 95%;
       --tw-scale-y: 95%;
       --tw-scale-z: 95%;
+      scale: var(--tw-scale-x) var(--tw-scale-y);
+    }
+  }
+  .active\:scale-96 {
+    &:active {
+      --tw-scale-x: 96%;
+      --tw-scale-y: 96%;
+      --tw-scale-z: 96%;
       scale: var(--tw-scale-x) var(--tw-scale-y);
     }
   }
