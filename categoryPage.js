@@ -72,14 +72,14 @@ document.querySelector(".goToNewArrivals2").addEventListener("click", (e) => {
 
 // Add event listener to the "Go to Top" arrow button
 document.querySelector(".go-to-top-arrow").addEventListener("click", (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    // Scroll to the top of the page
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+  // Scroll to the top of the page
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
   });
+});
 
 // current page variable
 let currentPage = 1;

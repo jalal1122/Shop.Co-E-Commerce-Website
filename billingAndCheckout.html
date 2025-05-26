@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Billing and Checkout-SHOP.CO</title>
+    <link href="./src/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./customStyles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Overall Tint -->
+    <div
+      class="overall-tint z-10 bg-black/20 w-full h-screen hidden absolute top-0 left-0 right-0 bottom-0"
+    ></div>
+    <!-- Header -->
+    <header id="header" class="relative">
+      <!-- Offer Banner -->
+      <div
+        class="offer-banner bg-black w-full text-white py-2 px-3 flex sm:flex-row flex-col justify-center sm:items-center items-start relative"
+      >
+        <span class="text-white break-all"
+          >Sign up and get 20% off your first order!.</span
+        >
+        <span class="underline font-semibold">Sign Up Now</span>
+        <!-- Close Sign icon for offer banner -->
+        <div
+          class="close-sign absolute right-3 sm:right-10 top-2 text-2xl hover:cursor-pointer"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+      <!-- Hamburger Menu -->
+      <div
+        class="hamburger-menu w-1/2 sm:w-1/4 absolute top-0 left-[-100%] bg-white h-screen p-4 transition-all duration-800 ease-in-out z-100 pt-10"
+      >
+        <!-- Close Sign icon for hamburger menu -->
+        <div
+          class="close-sign-for-hamburger-menu absolute right-5 top-1 text-2xl hover:cursor-pointer"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <ul
+          class="flex flex-col items-center justify-between text-[#858585] font-semibold gap-5 text-xl"
+        >
+          <li
+            class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black"
+          >
+            <a href="" class="goToHome">Home</a>
+          </li>
+          <li
+            class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black"
+          >
+            <a href="" class="goToTopSelling">Top Selling</a>
+          </li>
+          <li
+            class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black"
+          >
+            <a href="" class="goToNewArrivals">New Arrivals</a>
+          </li>
+          <li
+            class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black"
+          >
+            <a href="./categoriesPage.html">Categories</a>
+          </li>
+        </ul>
+      </div>
+      <!-- NavBar -->
+      <nav class="flex items-center justify-around bg-white h-20 w-full p-3">
+        <!-- Hamburger Icon -->
+        <div
+          class="hamburger text-2xl lg:hidden hover:cursor-pointer transform active:scale-95"
+        >
+          <i class="fa-solid fa-bars sm:text-4xl"></i>
+        </div>
+        <!-- left Side of nav -->
+        <div class="left-side-nav flex items-center justify-between gap-10">
+          <!-- logo div -->
+          <div
+            class="font-sans logoDiv hover:cursor-pointer text-black font-bold text-3xl md:text-5xl"
+          >
+            <a href="./index.html">SHOP.CO</a>
+          </div>
+          <!-- Nav LInks -->
+          <div class="navLinks bg-white lg:bg-transparent hidden lg:flex">
+            <ul
+              class="flex items-center justify-between text-[#858585] font-semibold gap-5 text-xl"
+            >
+              <li
+                class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black"
+              >
+                <a href="#heroSection" class="goToHome2">Home</a>
+              </li>
+              <li
+                class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black"
+              >
+                <a href="#topSelling" class="goToTopSelling2">Top Selling</a>
+              </li>
+              <li
+                class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black"
+              >
+                <a href="#newArrivals" class="goToNewArrivals2">New Arrivals</a>
+              </li>
+              <li
+                class="hover:cursor-pointer hover:border-b-2 hover:border-black hover:text-black"
+              >
+                <a href="./categoriesPage.html">Categories</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Search Bar Div -->
+        <div
+          class="searchBar sm:bg-[#F0F0F0] sm:w-1/4 h-10 rounded-full flex items-center justify-between py-2 px-4"
+        >
+          <i
+            class="fa-solid fa-magnifying-glass sm:text-[#858585] text-black"
+          ></i>
+          <input
+            type="text"
+            class="w-full h-full rounded-full pl-4 sm:block hidden focus:outline-none"
+            placeholder="Search for products..."
+          />
+        </div>
+        <!-- Cart Icon Div -->
+        <div class="icons">
+          <a href="./cart.html">
+            <i class="fa-solid fa-cart-shopping text-xl"></i>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!--Horizontal line in between  -->
+    <div class="w-[90%] h-[2px] bg-[#f0f0f0] mx-auto"></div>
+
+    <!-- Main -->
+    <main>
+      <!-- main-content Section -->
+      <div
+        class="main-content w-[95%] mx-auto flex flex-col lg:flex-row gap-10 justify-between items-start py-10"
+      >
+        <div class="left flex flex-col gap-10 p-5 w-2/3">
+          <div class="paymentMehtods">
+            <h1 class="bg-black w-full font-bold text-white px-5 py-2 text-2xl">
+              PAYMENT METHODS
+            </h1>
+            <div
+              class="payment-methods-list flex flex-wrap justify-center items-center gap-5 mt-5"
+            >
+              <!-- Visa Card Methods -->
+              <div
+                class="flex flex-col gap-2 justify-center items-center hover:cursor-pointer"
+              >
+                <div
+                  class="payment-method bg-white px-4 py-2 w-fit rounded-lg shadow-md"
+                >
+                  <img
+                    src="https://shop-co-demo.vercel.app/_next/static/media/visa.03cb6e6d.svg"
+                    alt="Visa"
+                  />
+                </div>
+              </div>
+              <!-- Mastercard Payment Method -->
+              <div
+                class="flex flex-col gap-2 justify-center items-center hover:cursor-pointer"
+              >
+                <div
+                  class="payment-method bg-white px-4 py-2 w-fit rounded-lg shadow-md"
+                >
+                  <img
+                    src="https://shop-co-demo.vercel.app/_next/static/media/mastercard.3f58fc84.svg"
+                    alt="MasterCard"
+                  />
+                </div>
+              </div>
+              <!-- Paypal -->
+              <div
+                class="flex flex-col gap-2 justify-center items-center hover:cursor-pointer"
+              >
+                <div
+                  class="payment-method bg-white px-4 py-2 w-fit rounded-lg shadow-md"
+                >
+                  <img
+                    src="https://shop-co-demo.vercel.app/_next/static/media/paypal.656cb31f.svg"
+                    alt="PayPal"
+                  />
+                </div>
+              </div>
+              <!-- Apple Pay -->
+              <div
+                class="flex flex-col gap-2 justify-center items-center hover:cursor-pointer"
+              >
+                <div
+                  class="payment-method bg-white px-4 py-2 w-fit rounded-lg shadow-md"
+                >
+                  <img
+                    src="https://shop-co-demo.vercel.app/_next/static/media/apple-pay.cd5a6b98.svg"
+                    alt="Apple Pay"
+                  />
+                </div>
+              </div>
+              <!-- Google Pay -->
+              <div
+                class="flex flex-col gap-2 justify-center items-center hover:cursor-pointer"
+              >
+                <div
+                  class="payment-method bg-white px-4 py-2 w-fit rounded-lg shadow-md"
+                >
+                  <img
+                    src="https://shop-co-demo.vercel.app/_next/static/media/google-pay.61e7048b.svg"
+                    alt="Google Pay"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="billing-information">
+            <h1 class="bg-black w-full font-bold text-white px-5 py-2 text-2xl">
+              BILLING INFORMATION
+            </h1>
+            <form class="flex flex-col gap-3 mt-5 justify-center items-center">
+              <input
+                type="text"
+                placeholder="Full Name"
+                class="w-full p-3 mt-5 rounded-md border border-gray-300 focus:outline-none focus:border-black"
+              />
+              <input
+                type="email"
+                placeholder="Email Address"
+                class="w-full p-3 mt-5 rounded-md border border-gray-300 focus:outline-none focus:border-black"
+              />
+              <input
+                type="text"
+                placeholder="Phone Number"
+                class="w-full p-3 mt-5 rounded-md border border-gray-300 focus:outline-none focus:border-black"
+              />
+              <input
+                type="text"
+                placeholder="Address"
+                class="w-full p-3 mt-5 rounded-md border border-gray-300 focus:outline-none focus:border-black"
+              />
+              <input
+                type="text"
+                placeholder="Address Line 2"
+                class="w-full p-3 mt-5 rounded-md border border-gray-300 focus:outline-none focus:border-black"
+              />
+              <input
+                type="text"
+                placeholder="City"
+                class="w-full p-3 mt-5 rounded-md border border-gray-300 focus:outline-none focus:border-black"
+              />
+              <input
+                type="text"
+                placeholder="State"
+                class="w-full p-3 mt-5 rounded-md border border-gray-300 focus:outline-none focus:border-black"
+              />
+              <input
+                type="text"
+                placeholder="Zip Code"
+                class="w-full p-3 mt-5 rounded-md border border-gray-300 focus:outline-none focus:border-black"
+              />
+              <input
+                type="text"
+                placeholder="Country"
+                class="w-full p-3 mt-5 rounded-md border border-gray-300 focus:outline-none focus:border-black"
+              />
+              <input
+                type="submit"
+                class="p-3 mt-5 w-1/2 bg-black text-white font-semibold rounded-md hover:bg-gray-800 cursor-pointer"
+                value="Confirm Order"
+              />
+            </form>
+          </div>
+        </div>
+        <div class="right w-1/3">
+          <div class="order-summary w-full p-5 flex flex-col gap-3">
+            <h1 class="bg-black w-full font-bold text-white px-5 py-2 text-2xl">
+              ORDER SUMMARY
+            </h1>
+            <div class="order-details flex flex-col gap-5 mt-5">
+              <div
+                class="selectd-payment-method w-full flex justify-between items-center gap-2"
+              >
+                <h2 class="font-semibold text-lg">Selected Payment Method:</h2>
+                <div
+                  class="payment-method bg-white px-4 py-2 w-fit rounded-lg shadow-md"
+                >
+                  <img
+                    src="https://shop-co-demo.vercel.app/_next/static/media/visa.03cb6e6d.svg"
+                    alt="Visa"
+                  />
+                </div>
+              </div>
+              <div
+                class="customer-name w-full flex justify-between items-center gap-2"
+              >
+                <h2 class="font-semibold text-lg">Customer Name:</h2>
+                <div class="name-value text-black font-bold text-lg">
+                  Anis Riaz
+                </div>
+              </div>
+              <div
+                class="customer-email w-full flex justify-between items-center gap-2"
+              >
+                <h2 class="font-semibold text-lg">Customer Email:</h2>
+                <div class="email-value text-black font-bold text-lg">
+                  jk4350649@gmail.com
+                </div>
+              </div>
+              <div
+                class="customer-phone w-full flex justify-between items-center gap-2"
+              >
+                <h2 class="font-semibold text-lg">Customer Phone:</h2>
+                <div class="phone-value text-black font-bold text-lg">
+                  +1234567890
+                </div>
+              </div>
+              <div class="customer-address w-full flex justify-between items-center gap-2">
+                <h2 class="font-semibold text-left text-lg">Customer Address:</h2>
+                <div class="address-value text-black text-right font-bold text-lg">
+                  123 Main St, Springfield, IL
+                </div>
+              </div>
+              <div class="total-amount"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Background Gradient Div -->
+    <div
+      class="bg-gradient-to-b from-white from-50% to-[#f0f0f0]"
+      style="
+        background: linear-gradient(
+          0deg,
+          rgba(240, 240, 240, 1) 50%,
+          rgba(255, 255, 255, 1) 0%
+        );
+      "
+    >
+      <!-- NewsLetter -->
+      <div class="w-full lg:w-[80%] mx-auto">
+        <div
+          class="flex flex-col items-center gap-4 bg-black p-6 text-white md:flex-row bg-card rounded-[20px]"
+        >
+          <h2
+            class="w-full md:w-2/3 text-3xl lg:text-5xl font-bold text-center"
+          >
+            STAY UPTO DATE ABOUT OUR LATEST OFFERS
+          </h2>
+          <div class="flex w-full flex-1 flex-col gap-4">
+            <div class="relative flex w-full items-center">
+              <img
+                alt="search"
+                width="24"
+                height="24"
+                class="absolute ml-4 select-none contrast-0 filter"
+                style="color: transparent"
+                src="https://shop-co-demo.vercel.app/icons/mail.svg"
+              /><input
+                placeholder="Enter your email address"
+                class="w-full rounded-full bg-search py-3 pl-12 pr-6 placeholder:text-black/40 bg-white text-black"
+              />
+            </div>
+            <button
+              class="rounded-full p-4 w-full bg-white py-3 text-black hover:bg-white/95"
+            >
+              Subscribe to Newsletter
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#f0f0f0] p-5">
+      <div class="lg:w-[80%] bg-[#f0f0f0] lg:mx-auto w-full">
+        <div
+          class="top-side flex flex-col lg:flex-row lg:justify-between justify-center lg:items-center gap-5"
+        >
+          <div
+            class="div-1 flex flex-col lg:justify-center lg:items-center gap-5 lg:w-40 w-full"
+          >
+            <h1
+              onclick="gotoHOmeTop()"
+              class="text-black font-bold text-2xl hover:cursor-pointer"
+            >
+              SHOP.CO
+            </h1>
+            <p class="text-lg lg:text-center">
+              We have clothes that suits your style and which you're proud to
+              wear. From women to men.
+            </p>
+            <div class="social-icons flex gap-2">
+              <div class="twiter-icon rounded-full border border-black p-2 w-7">
+                <a href="https://twitter.com/">
+                  <img
+                    src="https://shop-co-demo.vercel.app/_next/static/media/twitter.b03b8cbe.svg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div
+                class="facebook-icon rounded-full border border-black p-2 w-7 bg-black"
+              >
+                <a href="https://www.facebook.com">
+                  <img
+                    src="https://shop-co-demo.vercel.app/_next/static/media/facebook.ec567a02.svg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div
+                class="instagram-icon rounded-full border border-black p-2 w-7"
+              >
+                <a href="https://www.instagram.com/">
+                  <img
+                    src="https://shop-co-demo.vercel.app/_next/static/media/instagram.c3d9a0fc.svg"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div class="github-icon rounded-full border border-black p-2 w-7">
+                <a href="https://www.github.com/">
+                  <img
+                    src="https://shop-co-demo.vercel.app/_next/static/media/github.0933da81.svg"
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="grid lg:grid-cols-4 grid-cols-2 gap-4 w-full">
+            <div class="div-2 flex flex-col lg:items-center gap-5">
+              <h3 class="font-bold">COMPANY</h3>
+              <p>About</p>
+              <p>Features</p>
+              <p>Works</p>
+              <p>Career</p>
+            </div>
+            <div class="div-3 flex flex-col lg:items-center gap-5">
+              <h3 class="font-bold">HELP</h3>
+              <p>Customer Support</p>
+              <p>Delivery Details</p>
+              <p>Terms &amp; Conditions</p>
+              <p>Privacy Policy</p>
+            </div>
+            <div class="div-4 flex flex-col lg:items-center gap-5">
+              <h3 class="font-bold">FAQ</h3>
+              <p>Account</p>
+              <p>Manage Deliveries</p>
+              <p>Orders</p>
+              <p>Payments</p>
+            </div>
+            <div class="div-5 flex flex-col lg:items-center gap-5">
+              <h3 class="font-bold">RESOURCES</h3>
+              <p>Free eBooks</p>
+              <p>Development Tutorial</p>
+              <p>How to - Blog</p>
+              <p>Youtube Playlist</p>
+            </div>
+          </div>
+        </div>
+        <div class="horizontal-line bg-gray-400 h-[1px] mt-5"></div>
+        <div
+          class="bottom-side flex lg:flex-row flex-col gap-3 justify-between items-center mt-5"
+        >
+          <p class="text-center font-semibold">
+            Shop.co © 2000-2023, All Rights Reserved
+          </p>
+          <div class="partners flex gap-3">
+            <div class="visa px-3 py-2 rounded-md bg-white">
+              <img
+                src="https://shop-co-demo.vercel.app/_next/static/media/visa.03cb6e6d.svg"
+                alt=""
+              />
+            </div>
+            <div class="mastercard px-3 py-2 rounded-md bg-white">
+              <img
+                src="https://shop-co-demo.vercel.app/_next/static/media/mastercard.3f58fc84.svg"
+                alt=""
+              />
+            </div>
+            <div class="paypal px-3 py-2 rounded-md bg-white">
+              <img
+                src="https://shop-co-demo.vercel.app/_next/static/media/paypal.656cb31f.svg"
+                alt=""
+              />
+            </div>
+            <div class="apple-pay px-3 py-2 rounded-md bg-white">
+              <img
+                src="https://shop-co-demo.vercel.app/_next/static/media/apple-pay.cd5a6b98.svg"
+                alt=""
+              />
+            </div>
+            <div class="google-pay px-3 py-2 rounded-md bg-white">
+              <img
+                src="https://shop-co-demo.vercel.app/_next/static/media/google-pay.61e7048b.svg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Go To Top Arrow Button -->
+    <div
+      class="go-to-top-arrow fixed bottom-5 right-5 bg-white p-3 rounded-full shadow-lg text-black font-bold text-3xl hover:cursor-pointer"
+    >
+      <a href="">&uparrow;</a>
+    </div>
+  </body>
+  <script src="./billing.js"></script>
+</html>
