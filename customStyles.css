@@ -1,4 +1,4 @@
-body{
+html {
   scroll-behavior: smooth;
 }
 
@@ -6,12 +6,12 @@ body{
   width: 150px;
 }
 
-.swiper{
+.swiper {
   padding: 5px !important;
   gap: 10px !important;
 }
 
-.swiper-wrapper-custom{
+.swiper-wrapper-custom {
   padding: 5px !important;
 }
 
@@ -52,5 +52,27 @@ body{
 @media (max-width: 640px) {
   .brands svg {
     width: 100px;
+  }
+}
+
+@media (min-width: 768px) {
+  .right.scrollCont,
+  .filters {
+    position: sticky;
+    top: 2rem; /* Adjust as needed for your header */
+    align-self: flex-start; /* Prevents stretching in flex layouts */
+    z-index: 10;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-480 {
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+  }
+  .custom-border{
+    border: #000;
+    border-bottom: 1px solid black;
   }
 }

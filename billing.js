@@ -80,3 +80,69 @@ document.querySelector(".go-to-top-arrow").addEventListener("click", (e) => {
     behavior: "smooth",
   });
 });
+
+// Target the payment buttons
+let paymentButtons = document.querySelectorAll(".payment-method img");
+
+// Add click event listeners to each payment button
+paymentButtons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    let imgUrl = e.target.src;
+    document.querySelector(".selected-payment-method img").src = imgUrl;
+  });
+});
+
+// target the billing form inputs
+let billingFormInputs = document.querySelectorAll(".billing-form input");
+
+// Add input event listeners to each billing form input
+billingFormInputs.forEach((input) => {
+  input.addEventListener("input", (e) => {
+    // Get the id and value of the input field
+    let inputId = e.target.id;
+    let inputValue = e.target.value;
+
+    // Update the corresponding value in the billing summary
+    if (inputId === "fullName") {
+      document.querySelector(".name-value").textContent = inputValue;
+    } else if (inputId === "email") {
+      document.querySelector(".email-value").textContent = inputValue;
+    } else if (inputId === "phoneNumber") {
+      document.querySelector(".phone-value").textContent = inputValue;
+    } else if (inputId === "address") {
+      document.querySelector(".address-value").textContent = inputValue;
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Initialize the billing form inputs with empty values
+  billingFormInputs.forEach((input) => {
+    if (!(input.id === "confirmOrder")) {
+      input.value = "";
+    }
+  });
+
+  // Set the initial values in the billing summary
+  document.querySelector(".name-value").textContent = "";
+  document.querySelector(".email-value").textContent = "";
+  document.querySelector(".phone-value").textContent = "";
+  document.querySelector(".address-value").textContent = "";
+});
+
+// target the form
+let billingForm = document.querySelector(".billing-form");
+
+// Add submit event listener to the billing form
+billingForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  // Validate the form inputs
+  if (!fullName || !email || !phoneNumber || !address) {
+    alert("Please fill in all fields.");
+    return;
+  }
+
+  // Display a confirmation message
+  alert("Order confirmed! Thank you for your purchase.");
+});

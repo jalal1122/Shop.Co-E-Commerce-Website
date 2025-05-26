@@ -266,3 +266,16 @@ function calculateSummary() {
   totalPriceElement.textContent = `$${totalPrice.toFixed(2)}`;
   subtotalPriceElement.textContent = `${subtotalPrice.toFixed(2)}`;
 }
+
+// target the checkout button
+let checkoutButton = document.querySelector(".checkout-button button");
+
+// Add click event listener to the checkout button
+checkoutButton.addEventListener("click", () => {
+  const totalPriceElement = document.querySelector(".total-price");
+  localStorage.setItem(
+    "totalPrice",
+    totalPriceElement.textContent.split("$")[1].trim()
+  );
+  window.location.href = "./billingAndCheckout.html";
+});
