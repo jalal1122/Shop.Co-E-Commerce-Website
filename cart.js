@@ -184,6 +184,7 @@ function renderCartItems() {
 
       // Re-render the cart items
       renderCartItems();
+      calculateSummary(); // Recalculate the summary
     });
   });
 
