@@ -108,7 +108,7 @@ function renderCartItems() {
   // Render each item in the cart
   cartItems.forEach((item) => {
     cartItemsHTML += `<div
-              class="cart-item w-full flex items-center justify-center gap-5 p-5 bg-white border-2 border-[#f0f0f0] rounded-lg shadow-md"
+              class="cart-item w-full flex flex-col sm:flex-row items-center justify-center gap-5 p-5 bg-white border-2 border-[#f0f0f0] rounded-lg shadow-md"
             >
               <!-- Image -->
               <div class="left-image w-fit h-fit flex items-center justify-center p-2 shadow-lg rounded-lg">
