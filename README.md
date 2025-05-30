@@ -74,7 +74,12 @@ To explore and run this project locally:
 ## 📸 UI Preview
 
 ![Preview](images-for-github-preview/hero.png)
-
+![Preview](images-for-github-preview/landing-page-2.png)
+![Preview](images-for-github-preview/browseby.png)
+![Preview](images-for-github-preview/happy-clients.png)
+![Preview](images-for-github-preview/categories.png)
+![Preview](images-for-github-preview/cart.png)
+![Preview](images-for-github-preview/checkout.png)
 
 ---
 
