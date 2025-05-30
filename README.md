@@ -73,7 +73,7 @@ To explore and run this project locally:
 
 ## 📸 UI Preview
 
-![Preview](images for github preview/hero.png)
+![Preview](images-for-github-preview/hero.png)
 
 
 ---
